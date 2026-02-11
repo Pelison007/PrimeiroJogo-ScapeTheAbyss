@@ -1,0 +1,424 @@
+fileFormatVersion: 2
+guid: 41cdd6dbe953f2b4f8ad975a4a6d0199
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6531600252978559790
+    second: projetil prefab_0
+  - first:
+      213: -8212991717245942420
+    second: projetil prefab_1
+  - first:
+      213: 6576920521374534450
+    second: projetil prefab_2
+  - first:
+      213: -2159370436002610819
+    second: projetil prefab_3
+  - first:
+      213: -8294767422843605937
+    second: projetil prefab_4
+  - first:
+      213: 7949831069666793111
+    second: projetil prefab_5
+  - first:
+      213: 4093450498210464300
+    second: projetil prefab_6
+  - first:
+      213: -5378605760648605347
+    second: projetil prefab_7
+  - first:
+      213: -3816424382388099175
+    second: projetil prefab_8
+  - first:
+      213: 3396472981548719603
+    second: projetil prefab_9
+  - first:
+      213: -4592461389264978108
+    second: projetil prefab_10
+  - first:
+      213: 7674852765091586672
+    second: projetil prefab_11
+  - first:
+      213: 5554006347582001443
+    second: projetil prefab_12
+  - first:
+      213: -1803833727276738910
+    second: projetil prefab_13
+  - first:
+      213: -3564308417289095075
+    second: projetil prefab_14
+  - first:
+      213: -2094167767238361784
+    second: projetil prefab_15
+  - first:
+      213: 5549119366288564540
+    second: projetil prefab_16
+  - first:
+      213: 4728809291131264596
+    second: projetil prefab_17
+  - first:
+      213: -2791339773064958941
+    second: projetil prefab_18
+  - first:
+      213: 7693548286199481496
+    second: projetil prefab_19
+  - first:
+      213: -2766231574769765107
+    second: projetil prefab_20
+  - first:
+      213: -3156740199384283066
+    second: projetil prefab_21
+  - first:
+      213: 2435922573996700879
+    second: projetil prefab_22
+  - first:
+      213: -3653367764518430540
+    second: projetil prefab_23
+  - first:
+      213: -3931792217466288850
+    second: projetil prefab_24
+  - first:
+      213: -1229942821291074921
+    second: projetil prefab_25
+  - first:
+      213: 7316700414492768789
+    second: projetil prefab_26
+  - first:
+      213: 3411439417723921779
+    second: projetil prefab_27
+  - first:
+      213: -1439207300571331662
+    second: projetil prefab_28
+  - first:
+      213: 2066819347709357546
+    second: projetil prefab_29
+  - first:
+      213: -8762280952854833598
+    second: projetil prefab_30
+  - first:
+      213: 8996820631441859383
+    second: projetil prefab_31
+  - first:
+      213: -9160924783059874115
+    second: projetil prefab_32
+  - first:
+      213: 3168185364809833544
+    second: projetil prefab_33
+  - first:
+      213: 660227020026304892
+    second: projetil prefab_34
+  - first:
+      213: 3295772023435100681
+    second: projetil prefab_35
+  - first:
+      213: -2332686503486480568
+    second: projetil prefab_36
+  - first:
+      213: 5450625904451767911
+    second: projetil prefab_37
+  - first:
+      213: 3784986196554796561
+    second: projetil prefab_38
+  - first:
+      213: -7064037470814377488
+    second: projetil prefab_39
+  - first:
+      213: 3399212880482246762
+    second: projetil prefab_40
+  - first:
+      213: -113786441779452226
+    second: projetil prefab_41
+  - first:
+      213: 8903960273470531602
+    second: projetil prefab_42
+  - first:
+      213: 9028278090792150477
+    second: projetil prefab_43
+  - first:
+      213: 2274062688915512011
+    second: projetil prefab_44
+  - first:
+      213: 7761887421501936373
+    second: projetil prefab_45
+  - first:
+      213: -6392625723618626717
+    second: projetil prefab_46
+  - first:
+      213: 2221948083615477305
+    second: projetil prefab_47
+  - first:
+      213: 6391291379282615858
+    second: projetil prefab_48
+  - first:
+      213: 8019990334797658186
+    second: projetil prefab_49
+  - first:
+      213: 7025386451410465873
+    second: projetil prefab_50
+  - first:
+      213: 3776474908236761638
+    second: projetil prefab_51
+  - first:
+      213: 4613105698675108420
+    second: projetil prefab_52
+  - first:
+      213: 1904326000283049755
+    second: projetil prefab_53
+  - first:
+      213: -2288237935684887870
+    second: projetil prefab_54
+  - first:
+      213: -8004744539714167670
+    second: projetil prefab_55
+  - first:
+      213: -4003953021324215342
+    second: projetil prefab_56
+  - first:
+      213: 506377300002164143
+    second: projetil prefab_57
+  - first:
+      213: 8428868478818102339
+    second: projetil prefab_58
+  - first:
+      213: 3566621463447926684
+    second: projetil prefab_59
+  - first:
+      213: 9182287268833739425
+    second: projetil prefab_60
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: projetil prefab_44
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 116
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.4743557, y: 0.5256448}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bca57c197f71f8f10800000000000000
+      internalID: 2274062688915512011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a4bc267449f2d494ba34e242c87796f7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      projetil prefab_0: 6531600252978559790
+      projetil prefab_1: -8212991717245942420
+      projetil prefab_10: -4592461389264978108
+      projetil prefab_11: 7674852765091586672
+      projetil prefab_12: 5554006347582001443
+      projetil prefab_13: -1803833727276738910
+      projetil prefab_14: -3564308417289095075
+      projetil prefab_15: -2094167767238361784
+      projetil prefab_16: 5549119366288564540
+      projetil prefab_17: 4728809291131264596
+      projetil prefab_18: -2791339773064958941
+      projetil prefab_19: 7693548286199481496
+      projetil prefab_2: 6576920521374534450
+      projetil prefab_20: -2766231574769765107
+      projetil prefab_21: -3156740199384283066
+      projetil prefab_22: 2435922573996700879
+      projetil prefab_23: -3653367764518430540
+      projetil prefab_24: -3931792217466288850
+      projetil prefab_25: -1229942821291074921
+      projetil prefab_26: 7316700414492768789
+      projetil prefab_27: 3411439417723921779
+      projetil prefab_28: -1439207300571331662
+      projetil prefab_29: 2066819347709357546
+      projetil prefab_3: -2159370436002610819
+      projetil prefab_30: -8762280952854833598
+      projetil prefab_31: 8996820631441859383
+      projetil prefab_32: -9160924783059874115
+      projetil prefab_33: 3168185364809833544
+      projetil prefab_34: 660227020026304892
+      projetil prefab_35: 3295772023435100681
+      projetil prefab_36: -2332686503486480568
+      projetil prefab_37: 5450625904451767911
+      projetil prefab_38: 3784986196554796561
+      projetil prefab_39: -7064037470814377488
+      projetil prefab_4: -8294767422843605937
+      projetil prefab_40: 3399212880482246762
+      projetil prefab_41: -113786441779452226
+      projetil prefab_42: 8903960273470531602
+      projetil prefab_43: 9028278090792150477
+      projetil prefab_44: 2274062688915512011
+      projetil prefab_45: 7761887421501936373
+      projetil prefab_46: -6392625723618626717
+      projetil prefab_47: 2221948083615477305
+      projetil prefab_48: 6391291379282615858
+      projetil prefab_49: 8019990334797658186
+      projetil prefab_5: 7949831069666793111
+      projetil prefab_50: 7025386451410465873
+      projetil prefab_51: 3776474908236761638
+      projetil prefab_52: 4613105698675108420
+      projetil prefab_53: 1904326000283049755
+      projetil prefab_54: -2288237935684887870
+      projetil prefab_55: -8004744539714167670
+      projetil prefab_56: -4003953021324215342
+      projetil prefab_57: 506377300002164143
+      projetil prefab_58: 8428868478818102339
+      projetil prefab_59: 3566621463447926684
+      projetil prefab_6: 4093450498210464300
+      projetil prefab_60: 9182287268833739425
+      projetil prefab_7: -5378605760648605347
+      projetil prefab_8: -3816424382388099175
+      projetil prefab_9: 3396472981548719603
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

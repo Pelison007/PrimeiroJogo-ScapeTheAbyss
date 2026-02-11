@@ -1,0 +1,365 @@
+fileFormatVersion: 2
+guid: a2172af2186eef54791765988358907f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 769232595463821691
+    second: Personagem de capuz com guarda-chuva_0
+  - first:
+      213: 7661323542840367409
+    second: Personagem de capuz com guarda-chuva_1
+  - first:
+      213: -2491572204719972229
+    second: Personagem de capuz com guarda-chuva_2
+  - first:
+      213: 7210222276733785602
+    second: Personagem de capuz com guarda-chuva_3
+  - first:
+      213: 1454263535738062725
+    second: Personagem de capuz com guarda-chuva_4
+  - first:
+      213: 6205749513757219639
+    second: Personagem de capuz com guarda-chuva_5
+  - first:
+      213: -2767563054726787120
+    second: Personagem de capuz com guarda-chuva_6
+  - first:
+      213: -22629514466605723
+    second: Personagem de capuz com guarda-chuva_7
+  - first:
+      213: -5829388671219509012
+    second: Personagem de capuz com guarda-chuva_8
+  - first:
+      213: 3884884945099874357
+    second: Personagem de capuz com guarda-chuva_9
+  - first:
+      213: -6457444123062296263
+    second: Personagem de capuz com guarda-chuva_10
+  - first:
+      213: 1956238928409545430
+    second: Personagem de capuz com guarda-chuva_11
+  - first:
+      213: 4802524578534921903
+    second: Personagem de capuz com guarda-chuva_12
+  - first:
+      213: 4363577474791038968
+    second: Personagem de capuz com guarda-chuva_13
+  - first:
+      213: 4785150304306161030
+    second: Personagem de capuz com guarda-chuva_14
+  - first:
+      213: -7532369136410218059
+    second: Personagem de capuz com guarda-chuva_15
+  - first:
+      213: -8267279128519129063
+    second: Personagem de capuz com guarda-chuva_16
+  - first:
+      213: -4874349229202402983
+    second: Personagem de capuz com guarda-chuva_17
+  - first:
+      213: -194342802281318256
+    second: Personagem de capuz com guarda-chuva_18
+  - first:
+      213: -1311411739443361424
+    second: Personagem de capuz com guarda-chuva_19
+  - first:
+      213: -8142257570353968419
+    second: Personagem de capuz com guarda-chuva_20
+  - first:
+      213: -4942486845581290005
+    second: Personagem de capuz com guarda-chuva_21
+  - first:
+      213: -3537835555824097295
+    second: Personagem de capuz com guarda-chuva_22
+  - first:
+      213: 7401071397892683189
+    second: Personagem de capuz com guarda-chuva_23
+  - first:
+      213: -8763143799205795171
+    second: Personagem de capuz com guarda-chuva_24
+  - first:
+      213: 361824739997542775
+    second: Personagem de capuz com guarda-chuva_25
+  - first:
+      213: 3089145016473774410
+    second: Personagem de capuz com guarda-chuva_26
+  - first:
+      213: 6811534696714800020
+    second: Personagem de capuz com guarda-chuva_27
+  - first:
+      213: -8131866978040835076
+    second: Personagem de capuz com guarda-chuva_28
+  - first:
+      213: 2645017817954046009
+    second: Personagem de capuz com guarda-chuva_29
+  - first:
+      213: 7515748676429849797
+    second: Personagem de capuz com guarda-chuva_30
+  - first:
+      213: -6773481452085002536
+    second: Personagem de capuz com guarda-chuva_31
+  - first:
+      213: 3109181715440654694
+    second: Personagem de capuz com guarda-chuva_32
+  - first:
+      213: 7343890979159189359
+    second: Personagem de capuz com guarda-chuva_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Personagem de capuz com guarda-chuva_14
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 667
+        width: 228
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 685650559d4486240800000000000000
+      internalID: 4785150304306161030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem de capuz com guarda-chuva_37
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 714
+        width: 226
+        height: 272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 614506add9cf9194e8c318425508887c
+      internalID: -1051380928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Personagem de capuz com guarda-chuva_38
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 64
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede39d9c8b0af3c4f982e56f29ae4a1a
+      internalID: -700310473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: bae2461f7bbac7341912bfdc8f97173f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":192.0,"y":192.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Personagem de capuz com guarda-chuva_0: 769232595463821691
+      Personagem de capuz com guarda-chuva_1: 7661323542840367409
+      Personagem de capuz com guarda-chuva_10: -6457444123062296263
+      Personagem de capuz com guarda-chuva_11: 1956238928409545430
+      Personagem de capuz com guarda-chuva_12: 4802524578534921903
+      Personagem de capuz com guarda-chuva_13: 4363577474791038968
+      Personagem de capuz com guarda-chuva_14: 4785150304306161030
+      Personagem de capuz com guarda-chuva_15: -7532369136410218059
+      Personagem de capuz com guarda-chuva_16: -8267279128519129063
+      Personagem de capuz com guarda-chuva_17: -4874349229202402983
+      Personagem de capuz com guarda-chuva_18: -194342802281318256
+      Personagem de capuz com guarda-chuva_19: -1311411739443361424
+      Personagem de capuz com guarda-chuva_2: -2491572204719972229
+      Personagem de capuz com guarda-chuva_20: -8142257570353968419
+      Personagem de capuz com guarda-chuva_21: -4942486845581290005
+      Personagem de capuz com guarda-chuva_22: -3537835555824097295
+      Personagem de capuz com guarda-chuva_23: 7401071397892683189
+      Personagem de capuz com guarda-chuva_24: -8763143799205795171
+      Personagem de capuz com guarda-chuva_25: 361824739997542775
+      Personagem de capuz com guarda-chuva_26: 3089145016473774410
+      Personagem de capuz com guarda-chuva_27: 6811534696714800020
+      Personagem de capuz com guarda-chuva_28: -8131866978040835076
+      Personagem de capuz com guarda-chuva_29: 2645017817954046009
+      Personagem de capuz com guarda-chuva_3: 7210222276733785602
+      Personagem de capuz com guarda-chuva_30: 7515748676429849797
+      Personagem de capuz com guarda-chuva_31: -6773481452085002536
+      Personagem de capuz com guarda-chuva_32: 3109181715440654694
+      Personagem de capuz com guarda-chuva_33: 7343890979159189359
+      Personagem de capuz com guarda-chuva_34: 571942215
+      Personagem de capuz com guarda-chuva_35: 1261627735
+      Personagem de capuz com guarda-chuva_36: 461634295
+      Personagem de capuz com guarda-chuva_37: -1051380928
+      Personagem de capuz com guarda-chuva_38: -700310473
+      Personagem de capuz com guarda-chuva_4: 1454263535738062725
+      Personagem de capuz com guarda-chuva_5: 6205749513757219639
+      Personagem de capuz com guarda-chuva_6: -2767563054726787120
+      Personagem de capuz com guarda-chuva_7: -22629514466605723
+      Personagem de capuz com guarda-chuva_8: -5829388671219509012
+      Personagem de capuz com guarda-chuva_9: 3884884945099874357
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
