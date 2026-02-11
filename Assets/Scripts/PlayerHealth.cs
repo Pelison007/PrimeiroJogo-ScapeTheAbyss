@@ -17,7 +17,7 @@ public class PlayerHealth: Health
     // ------booleano de vivo e morto ----
     public bool vivo = true;
     // crua
-    public float cura= 26;
+    public float cura= 27;
     public float duracaoCura = 5f;
 
     public float intervaloCura = 3f; // tempo entre curas automáticas
