@@ -18,7 +18,7 @@ public class PlayerHealth: Health
     public bool vivo = true;
     // crua
     public float cura= 27;
-    public float duracaoCura = 5f;
+    public float duracaoCura = 10f;
 
     public float intervaloCura = 3f; // tempo entre curas automáticas
     private float proximaCura = 0f;  // momento da próxima cura
