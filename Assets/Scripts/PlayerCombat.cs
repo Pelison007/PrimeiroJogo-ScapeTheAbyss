@@ -14,6 +14,7 @@ public class PlayerCombat : MonoBehaviour
     // ---------------------------
     [Header("Ataque Habilidade")]
     [SerializeField] private GameObject skillPrefab;
+    [SerializeField] private LayerMask ground;
 
     // -------------------
     public AudioSource SomPlayer;
@@ -55,12 +56,40 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log("Atacou!");
         }
     }
-    public void CastSkill(InputAction.CallbackContext context)
+    //public void CastSkill(InputAction.CallbackContext context)
+    //{
+    //    if (!context.performed) return;
+
+    //    animacao.SetTrigger("CastMagiaR");
+    //}
+
+    public void SpawnSkill(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
 
-        animacao.SetTrigger("Cast");
-    }
+        Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
+        mouseScreenPos.z = -mainCamera.transform.position.z;
 
+        Vector3 mouseWorldPos = mainCamera.ScreenToWorldPoint(mouseScreenPos);
+        mouseWorldPos.z = 0f;
+
+        Vector2 direction = (mouseWorldPos - transform.position).normalized;
+
+        float distance = Vector2.Distance(transform.position, mouseWorldPos);
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, distance, ground);
+        Debug.DrawRay(transform.position, direction * 10f, Color.red, 2f);
+
+        Vector3 finalPoint = mouseWorldPos;
+
+        if (hit.collider != null)
+        {
+            finalPoint = hit.point;
+        }
+
+        finalPoint.y += 5f; // altura do céu
+
+        Instantiate(skillPrefab, finalPoint, Quaternion.identity);
+    }
 
 }
