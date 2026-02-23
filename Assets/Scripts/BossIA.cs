@@ -3,6 +3,7 @@ using static UnityEngine.Analytics.IAnalytic;
 
 public class BossIA : MonoBehaviour
 {
+    bool vivo = true;
     public float detectionRange = 10f;
     public float moveSpeed = 3f;
 
@@ -167,6 +168,41 @@ public class BossIA : MonoBehaviour
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, combateBoss.attackRangeLonge);
+    }
+
+    public void Die()
+    {
+        if (!vivo) return;
+
+        vivo = false;
+
+        //if (audioS != null && Morte != null)
+        //{
+        //    audioS.PlayOneShot(Morte, 1f);
+        //}
+
+        // Toca animação de morte
+        if (anim != null)
+            anim.SetTrigger("BossMorto");
+
+        // Para movimento
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.gravityScale = 0f;
+
+        // Desliga colisão física
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+            col.enabled = false;
+
+        // Toca animação
+        rb.linearVelocity = Vector2.zero;
+        rb.simulated = false;
+
+        this.enabled = false;
+
+        GameController.gc.esqueleto++;
+        GameController.gc.RefreshScreen();
     }
 
 }
