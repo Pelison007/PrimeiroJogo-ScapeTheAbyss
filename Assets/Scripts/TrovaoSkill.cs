@@ -1,12 +1,15 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TrovaoSkill : MonoBehaviour
 {
     private Rigidbody2D rb;
     private bool bateu = false;
+
     
     public float speed = 20f;
-
+    [SerializeField] public float cooldownSkill = 5f;
+    private float ultimoUso = -Mathf.Infinity;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,6 +22,16 @@ public class TrovaoSkill : MonoBehaviour
         {
             transform.position += Vector3.down * speed * Time.deltaTime;
         }
+    }
+
+    public bool CanUse()
+    {
+        return Time.time >= ultimoUso + cooldownSkill;
+    }
+
+    public void TriggerCooldown()
+    {
+        ultimoUso = Time.time;
     }
 
     void OnCollisionEnter2D(Collision2D collision)

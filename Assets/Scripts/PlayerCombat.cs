@@ -15,7 +15,7 @@ public class PlayerCombat : MonoBehaviour
     [Header("Ataque Habilidade")]
     [SerializeField] private GameObject skillPrefab;
     [SerializeField] private LayerMask ground;
-
+    public TrovaoSkill SkilTrovao;
     // -------------------
     public AudioSource SomPlayer;
     public AudioClip ataque;
@@ -56,12 +56,6 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log("Atacou!");
         }
     }
-    //public void CastSkill(InputAction.CallbackContext context)
-    //{
-    //    if (!context.performed) return;
-
-    //    animacao.SetTrigger("CastMagiaR");
-    //}
 
     public void SpawnSkill(InputAction.CallbackContext context)
     {
@@ -89,7 +83,12 @@ public class PlayerCombat : MonoBehaviour
 
         finalPoint.y += 5f; // altura do céu
 
-        Instantiate(skillPrefab, finalPoint, Quaternion.identity);
+        if (SkilTrovao.CanUse())
+        {
+            Instantiate(skillPrefab, finalPoint, Quaternion.identity);
+            SkilTrovao.TriggerCooldown();
+            Debug.Log("Trovao usado!");
+        }
     }
 
 }
