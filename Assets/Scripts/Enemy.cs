@@ -312,6 +312,7 @@ public class EnemyAI : MonoBehaviour
     public void Die()
     {
         if (!vivo) return;
+
         vivo = false;
         isAttacking = false;
 

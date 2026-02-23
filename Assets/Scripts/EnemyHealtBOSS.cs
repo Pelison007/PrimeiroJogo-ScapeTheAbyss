@@ -54,13 +54,13 @@ public class EnemyHealtBOSS : Health
         }
     }
 
-    //protected override void morto()
-    //{
-    //    if (bossIA != null)
-    //    {
-    //        bossIA.Die();
-    //        Destroy(healthBar.gameObject, 8f);
-    //        Destroy(bossIA.gameObject, 8f);
-    //    }
-    //}
+    protected override void morto()
+    {
+        if (bossIA != null)
+        {
+            bossIA.Die();
+            Destroy(healthBar.gameObject, 8f);
+            Destroy(bossIA.gameObject, 8f);
+        }
+    }
 }
