@@ -15,19 +15,22 @@ public class PlayerCombat : MonoBehaviour
     [Header("Ataque Habilidade")]
     [SerializeField] private GameObject skillPrefab;
     [SerializeField] private LayerMask ground;
-    public TrovaoSkill SkilTrovao;
+    private TrovaoSkill trovaoSkill;
     // -------------------
     public AudioSource SomPlayer;
     public AudioClip ataque;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
+    public float displayTime = 0.5f; // tempo que o range ficará visível
+
     // habilidade
 
-    
+
     void Start()
     {
         animacao = GetComponent<Animator>();
         player = GetComponent<Player>();
+        trovaoSkill = GetComponent<TrovaoSkill>();
         mainCamera = Camera.main;
     }
     public void ResetarHitBox()
@@ -71,8 +74,15 @@ public class PlayerCombat : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, mouseWorldPos);
 
+        // Limitar a distância ao range máximo
+        if (distance > trovaoSkill.skillRange)
+        {
+            mouseWorldPos = (Vector2)transform.position + direction * trovaoSkill.skillRange;
+            distance = trovaoSkill.skillRange;
+        }
+
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, distance, ground);
-        Debug.DrawRay(transform.position, direction * 10f, Color.red, 2f);
+        Debug.DrawRay(transform.position, direction * distance, Color.red, 2f);
 
         Vector3 finalPoint = mouseWorldPos;
 
@@ -83,10 +93,14 @@ public class PlayerCombat : MonoBehaviour
 
         finalPoint.y += 5f; // altura do céu
 
-        if (SkilTrovao.CanUse())
+        if (trovaoSkill.CanUse())
         {
-            Instantiate(skillPrefab, finalPoint, Quaternion.identity);
-            SkilTrovao.TriggerCooldown();
+            GameObject obj = Instantiate(skillPrefab, finalPoint, Quaternion.identity);
+
+            DanoSkill dano = obj.GetComponent<DanoSkill>();
+            dano.Setup(trovaoSkill.damage, trovaoSkill.speed);
+
+            trovaoSkill.TriggerCooldown();
             Debug.Log("Trovao usado!");
         }
     }

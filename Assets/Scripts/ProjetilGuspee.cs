@@ -45,10 +45,5 @@ public class ProjetilGuspee : MonoBehaviour
             Destroy(gameObject);
         }
 
-        else if (collision.CompareTag("Obstacle"))
-        {
-            Destroy(gameObject);
-        }
-
     }
 }
