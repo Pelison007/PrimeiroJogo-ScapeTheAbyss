@@ -5,8 +5,6 @@ public class AttackHitBox : MonoBehaviour
     // dano de ataque
     public int Dano = 50;
     private bool jaDeuDano;
-    public AudioSource audioS;     // arraste o AudioSource do Player
-    public AudioClip hitSound;     // som de acerto
 
     public void ResetarDano()
     {
@@ -17,6 +15,8 @@ public class AttackHitBox : MonoBehaviour
     {
         Debug.Log("Hitbox tocou em: " + other.name);
         if (!other.CompareTag("Inimigo")) return;
+       
+
         if (jaDeuDano) return;
 
         // pega a vida do objeto que entra em contato / Other sgnifica o objeto que entra em contato com o hitbox
@@ -27,10 +27,10 @@ public class AttackHitBox : MonoBehaviour
             
             health.TakeDamage(Dano);
             jaDeuDano = true;
-            if (audioS != null && hitSound != null)
-            {
-                audioS.PlayOneShot(hitSound, 1f);
-            }
+
+            AudioManager.instance.Play("AcertouEsqueleto");
+
+
             Debug.Log("Causou " + Dano + " de dano em " + other.name);
         }
     }

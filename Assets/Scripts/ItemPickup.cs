@@ -157,7 +157,11 @@ public class ItemPickup : MonoBehaviour
             AudioManager.instance.Play("type");
 
             yield return new WaitForSecondsRealtime(typingSpeed);
+
+            if (textComponent.maxVisibleCharacters == totalVisibleCharacters)
+                AudioManager.instance.Stop("type");
         }
+        
     }
 
     public void MostrarMensagem(string[] mensagens, bool esperarTecla, System.Action onFinish = null)
@@ -171,7 +175,7 @@ public class ItemPickup : MonoBehaviour
     private IEnumerator MessageCoroutine(string[] mensagens, bool esperarTecla, System.Action onFinish)
     {
         isTyping = true;
-        Time.timeScale = 0f;
+        
 
         mensagem.SetActive(true);
 
@@ -209,7 +213,7 @@ public class ItemPickup : MonoBehaviour
         textComponent.text = "";
         mensagem.SetActive(false);
 
-        Time.timeScale = 1f;
+        
         isTyping = false;
 
         onFinish?.Invoke(); // EXECUTA AÇÃO FINAL

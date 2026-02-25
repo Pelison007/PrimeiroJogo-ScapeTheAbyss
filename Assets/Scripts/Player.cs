@@ -4,7 +4,6 @@ using TMPro;
 
 public class Player :MonoBehaviour
 {
-    
     private Vector2 direcao;
     private Rigidbody2D rb;
     private SpriteRenderer sr;

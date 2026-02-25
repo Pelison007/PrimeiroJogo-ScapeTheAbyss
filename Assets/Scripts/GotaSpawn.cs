@@ -80,6 +80,7 @@ public class GotaSpawn : MonoBehaviour
             if (rotinaChuva != null)
             {
                 StopCoroutine(rotinaChuva);
+                audioAtivo = true;
                 rotinaChuva = null;
             }
         }

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 public class ButtonSound : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
@@ -8,12 +9,12 @@ public class ButtonSound : MonoBehaviour, IPointerEnterHandler, IPointerClickHan
     // Update is called once per frame
     public void OnPointerEnter(PointerEventData eventData)
     {
-        MusicController.mC.PlayUISound(hoverSound);
+        AudioManager.instance.Play("Button");
     }
-
+    
     public void OnPointerClick(PointerEventData eventData)
     {
         EventSystem.current.SetSelectedGameObject(null);
-        MusicController.mC.PlayUISound(clickSound);
-    }
+        AudioManager.instance.Play("ButtonClick");
+     }
 }
