@@ -27,4 +27,21 @@ public class TrovaoSkill : MonoBehaviour
         ultimoUso = Time.time;
     }
 
+    public float CooldownRemaining
+    {
+        get
+        {
+            float restante = (ultimoUso + cooldownSkill) - Time.time;
+            return Mathf.Max(restante, 0);
+        }
+    }
+
+    public float CooldownPercent
+    {
+        get
+        {
+            return CooldownRemaining / cooldownSkill;
+        }
+    }
+
 }

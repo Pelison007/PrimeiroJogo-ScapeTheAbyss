@@ -70,27 +70,31 @@ public class EnemyAI : MonoBehaviour
     {
         if (!vivo) return;
         attackCooldown -= Time.deltaTime;
-        float distanceX = Mathf.Abs(player.position.x - rb.position.x);
-        float distanceY = Mathf.Abs(player.position.y - rb.position.y);
-        float allowedHeight = 1f; // ajuste conforme altura do inimigo
-
-        switch (state)
+        if (player != null && rb != null)
         {
-            case State.Idle:
-                HandleIdle(distanceX, distanceY, allowedHeight);
-                break;
+            float distanceX = Mathf.Abs(player.position.x - rb.position.x);
 
-            case State.Walk:
-                HandleWalk(distanceX, distanceY, allowedHeight);
-                break;
+            float distanceY = Mathf.Abs(player.position.y - rb.position.y);
+            float allowedHeight = 1f; // ajuste conforme altura do inimigo
 
-            case State.Aggro:
-                HandleAggro(distanceX, distanceY, allowedHeight);
-                break;
+            switch (state)
+            {
+                case State.Idle:
+                    HandleIdle(distanceX, distanceY, allowedHeight);
+                    break;
 
-            case State.Attack:
-                HandleAttack(distanceX, distanceY, allowedHeight);
-                break;
+                case State.Walk:
+                    HandleWalk(distanceX, distanceY, allowedHeight);
+                    break;
+
+                case State.Aggro:
+                    HandleAggro(distanceX, distanceY, allowedHeight);
+                    break;
+
+                case State.Attack:
+                    HandleAttack(distanceX, distanceY, allowedHeight);
+                    break;
+            }
         }
     }
     void CheckGround()

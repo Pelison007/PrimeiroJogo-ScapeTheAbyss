@@ -5,11 +5,6 @@ public class GuardaChuvaItem : MonoBehaviour
     private bool playerNear = false;
     private Player player;
 
-    void PickUpUmbrella()
-    {
-        player.GetUmbrella();   // avisa o player
-        Destroy(gameObject);    // remove o item do chão
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {

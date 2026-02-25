@@ -20,6 +20,8 @@ public class Player :MonoBehaviour
     private bool aguardandoConfirmacaoGuardaChuva = false;
     public GameObject mensagemGuardaChuva;
 
+    [Header("Item Trovao")]
+    private bool temTrovao = false;
 
 
     // sttatus player 
@@ -41,6 +43,8 @@ public class Player :MonoBehaviour
     private int NoChaoHash = Animator.StringToHash("NoChao");
     private int AndandoGuardaChuvaHash = Animator.StringToHash("AndandoGuardaChuva");
     private PlayerInput playerInput;
+    private InputAction skillAction;
+
     //variavel para som
     public AudioSource audioS;
     public AudioClip[] Sounds;
@@ -53,6 +57,12 @@ public class Player :MonoBehaviour
     {
         playerInput = GetComponent<PlayerInput>();
         playerLife = GetComponent<PlayerHealth>();
+
+        // pega a action pelo nome EXATO dela
+        skillAction = playerInput.actions["CastSkill"];
+
+        // começa desativada
+        skillAction.Disable();
     }
     void Start()
     {
@@ -74,13 +84,6 @@ public class Player :MonoBehaviour
     {
         if (playerInput != null) playerInput.enabled = true;
     }
-    // pegar o guarda-chuva
-    public void GetUmbrella()
-    {
-        hasUmbrella = true;
-        Debug.Log("Player agora TEM o guarda-chuva ☂️ | hasUmbrella = " + hasUmbrella);
-    }
-
 
     // para usar som nos outras classes
     public void PlayerSound(int index)
@@ -300,39 +303,61 @@ public class Player :MonoBehaviour
 
     public void OnPickup(InputAction.CallbackContext context)
     {
-        if (!context.performed) return;
-
         if (nearbyItem != null)
         {
-            nearbyItem.PickUp(this);
-        }
-        if (CompareTag("GuardaChuva"))
-        {
-            DesativaInput();
+            ItemType tipo = nearbyItem.itemType;
+
+
+            if (tipo == ItemType.GuardaChuva)
+            {
+                hasUmbrella = true;
+                
+                nearbyItem.ColetarGuardaChuva(this);
+
+                if (mensagemGuardaChuva != null)
+                    mensagemGuardaChuva.SetActive(true);
+
+            }
+
+            if (tipo == ItemType.TrovaoSkill)
+            {
+                // aqui você pode fazer algo específico do trovão se quiser
+                temTrovao = true;
+                nearbyItem.ColetarTrovaoSkill(this);
+                skillAction.Enable();
+                Debug.Log("Pegou skill do trovão");
+            }
         }
     }
     public void OnConfirmar(InputAction.CallbackContext context)
     {
-        if (!context.performed) return;
+        Debug.Log("Entrou aqui");
 
+        if (!context.performed) return;
         if (!aguardandoConfirmacaoGuardaChuva) return;
 
-        // despausa
+        // esconde mensagem
+        if (mensagemGuardaChuva != null)
+            mensagemGuardaChuva.SetActive(false);
+
+        // destrói o item agora
+        if (nearbyItem != null)
+        {
+            Destroy(nearbyItem.gameObject);
+            nearbyItem = null;
+        }
+
+        // despausa o jogo
         Time.timeScale = 1f;
 
         aguardandoConfirmacaoGuardaChuva = false;
-
-        if (mensagemGuardaChuva != null)
-        {
-            mensagemGuardaChuva.SetActive(false);
-            AtivaInput();
-        }
-            
     }
 
     public void AguardarConfirmacaoGuardaChuva()
     {
         aguardandoConfirmacaoGuardaChuva = true;
+        AtivaInput();
+
     }
 
     // pegar items
@@ -348,5 +373,12 @@ public class Player :MonoBehaviour
             nearbyItem = null;
     }
 
+
+    // ----------- skil  trovao ---------
+
+    public bool TemTrovao()
+    {
+        return temTrovao;
+    }
 }
 

@@ -401,8 +401,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   vidaMaxima: 120
   vidaAtual: 0
-  enemyAI: {fileID: 6950976667116587022}
   healthBar: {fileID: 5764680142668712075}
+  enemyAI: {fileID: 6950976667116587022}
 --- !u!1 &5266837822077132320
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthBar
   slider: {fileID: 8688314658232293322}
   fillImage: {fileID: 3344807509825840923}
-  target: {fileID: 0}
+  target: {fileID: 505416750163610329}
   offset: {x: -0.06, y: 0.43, z: 0}
   fullHealthColor: {r: 0.54509807, g: 0, b: 0, a: 1}
   midHealthColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
