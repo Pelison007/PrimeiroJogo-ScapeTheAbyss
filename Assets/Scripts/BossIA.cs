@@ -3,7 +3,7 @@ using static UnityEngine.Analytics.IAnalytic;
 
 public class BossIA : MonoBehaviour
 {
-    bool vivo = true;
+    public bool vivo = true;
     public float detectionRange = 10f;
     public float moveSpeed = 3f;
 
@@ -176,14 +176,11 @@ public class BossIA : MonoBehaviour
 
         vivo = false;
 
-        //if (audioS != null && Morte != null)
-        //{
-        //    audioS.PlayOneShot(Morte, 1f);
-        //}
-
         // Toca animação de morte
         if (anim != null)
             anim.SetTrigger("BossMorto");
+
+        AudioManager.instance.Play("MorteBoss");
 
         // Para movimento
         rb.linearVelocity = Vector2.zero;

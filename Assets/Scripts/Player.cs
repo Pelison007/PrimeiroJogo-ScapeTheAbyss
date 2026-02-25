@@ -21,7 +21,7 @@ public class Player :MonoBehaviour
     public GameObject mensagemGuardaChuva;
 
     [Header("Item Trovao")]
-    private bool temTrovao = false;
+    public bool temTrovao = false;
 
 
     // sttatus player 
@@ -45,9 +45,6 @@ public class Player :MonoBehaviour
     private PlayerInput playerInput;
     private InputAction skillAction;
 
-    //variavel para som
-    public AudioSource audioS;
-    public AudioClip[] Sounds;
     // respawn
     [Header("Respawn")]
     public Vector2 ultimoRespawn; // <--- aqui é declarado
@@ -83,14 +80,14 @@ public class Player :MonoBehaviour
     public void AtivaInput()
     {
         if (playerInput != null) playerInput.enabled = true;
+        if (!temTrovao)
+        {
+            skillAction.Disable();
+        }
     }
 
     // para usar som nos outras classes
-    public void PlayerSound(int index)
-    {
-        if (index < 0 || index >= Sounds.Length) return;
-        audioS.PlayOneShot(Sounds[index]);
-    }
+
     // Update is called once per frame
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -119,7 +116,7 @@ public class Player :MonoBehaviour
 
        if (podePular)
         {
-            audioS.PlayOneShot(Sounds[2]);
+            AudioManager.instance.Play("Pular");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
             rb.AddForce(Vector2.up * forcaPulo, ForceMode2D.Impulse);
 
@@ -136,7 +133,7 @@ public class Player :MonoBehaviour
         }           
         else if (!podePular && DoublePulo)
         {
-            audioS.PlayOneShot(Sounds[2]);
+            AudioManager.instance.Play("Pular");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
             rb.AddForce(Vector2.up * forcaPulo, ForceMode2D.Impulse);
             if (GuardaChuvaAberto)
@@ -249,7 +246,7 @@ public class Player :MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Spirit"))
         {
-            audioS.PlayOneShot(Sounds[0]);
+            AudioManager.instance.Play("Coletar Espirito");
             Destroy(collision.gameObject);
             gcPlayer.Spirit++;
             
@@ -257,7 +254,7 @@ public class Player :MonoBehaviour
 
         if (collision.gameObject.CompareTag("Life"))
         {
-            audioS.PlayOneShot(Sounds[1]);
+            AudioManager.instance.Play("Coletar Vida");
             Destroy(collision.gameObject);
             gcPlayer.lifes++;
         }
@@ -322,10 +319,16 @@ public class Player :MonoBehaviour
             if (tipo == ItemType.TrovaoSkill)
             {
                 // aqui você pode fazer algo específico do trovão se quiser
-                temTrovao = true;
+                //temTrovao = true;
                 nearbyItem.ColetarTrovaoSkill(this);
                 skillAction.Enable();
                 Debug.Log("Pegou skill do trovão");
+            }
+
+            if (tipo == ItemType.GameOver)
+            {
+
+                nearbyItem.GameOver(this);
             }
         }
     }

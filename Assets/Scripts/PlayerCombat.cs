@@ -17,8 +17,7 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private LayerMask ground;
     private TrovaoSkill trovaoSkill;
     // -------------------
-    public AudioSource SomPlayer;
-    public AudioClip ataque;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public float displayTime = 0.5f; // tempo que o range ficará visível
@@ -52,9 +51,9 @@ public class PlayerCombat : MonoBehaviour
         }
         else {
             animacao.SetTrigger("Ataque");
+            AudioManager.instance.Play("AtaquePlayer");
             attackHitBox.GetComponent<AttackHitBox>().ResetarDano();
 
-            SomPlayer.PlayOneShot(ataque);
             proximoAtaque = Time.time + cooldown;
             Debug.Log("Atacou!");
         }
@@ -96,6 +95,7 @@ public class PlayerCombat : MonoBehaviour
         if (trovaoSkill.CanUse())
         {
             GameObject obj = Instantiate(skillPrefab, finalPoint, Quaternion.identity);
+            AudioManager.instance.Play("SkilTrovao");
 
             DanoSkill dano = obj.GetComponent<DanoSkill>();
             dano.Setup(trovaoSkill.damage, trovaoSkill.speed);

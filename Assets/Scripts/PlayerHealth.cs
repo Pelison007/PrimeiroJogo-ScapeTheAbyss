@@ -93,7 +93,7 @@ public class PlayerHealth: Health
             if (player != null)
                 player.DesativaInput();
             vivo = false;
-            player.PlayerSound(4);
+            AudioManager.instance.Play("MortePlayer");
             rb.linearVelocity = Vector2.zero; // velociddade vai pra 0
             rb.bodyType = RigidbodyType2D.Kinematic; // para nao ser afetado GRAVIDADE e outras forças
             col.enabled = false; // desativa colisor
@@ -113,7 +113,7 @@ public class PlayerHealth: Health
             }
         }
     }
-
+    
     void Respawn()
     {
         vivo = true;
@@ -135,7 +135,7 @@ public class PlayerHealth: Health
         // REATIVA os comandos do Player
         if (player != null)
             player.AtivaInput();
-        player.PlayerSound(5); // som de respawn
+        AudioManager.instance.Play("Respawn");
     }
 
     public void LoadGameOver()

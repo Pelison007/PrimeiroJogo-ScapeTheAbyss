@@ -27,9 +27,9 @@ public class EnemyAnimationEvents : MonoBehaviour
         }
 
         // se não acertou nada, toca som de erro
-        if (hitbox.audioS != null && hitbox.Naoacerto != null)
+        if (hitbox.acertouPlayer == false)
         {
-            hitbox.audioS.PlayOneShot(hitbox.Naoacerto, 1f);
+            AudioManager.instance.Play("AtkEsqueleto");
         }
     }
 }

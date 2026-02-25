@@ -2,12 +2,15 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+
 
 public enum ItemType
 {
     GuardaChuva,
-    TrovaoSkill
-}
+    TrovaoSkill,
+    GameOver
+};
 
 public class ItemPickup : MonoBehaviour
 {
@@ -27,6 +30,10 @@ public class ItemPickup : MonoBehaviour
     private Player player;
     private bool isTyping = false;
 
+    public BossIA bossIA;
+    
+
+
     // ===============================
     // COLETA GUARDA-CHUVA
     // ===============================
@@ -45,20 +52,57 @@ public class ItemPickup : MonoBehaviour
     // ===============================
     public void ColetarTrovaoSkill(Player player)
     {
-        if (isTyping) return;
+        string[] mensagens =
+        {
+            "EU, Grande Guerreiro, Fui derrotado... mas o meu poder não se perdeu.",
+            "Pegue o meu <color=yellow>Feitiço TrovãoSagrado</color>, a força que derreteu tantos inimigos!",
+            "Aperte <color=red>R </color>para aceitar o poder!"
+        };
 
-        isTyping = true; // trava imediatamente
+        MostrarMensagem(mensagens, true, () =>
+        {
+            player.temTrovao = true;
+            player.AtivaInput();
+        });
 
         player.DesativaInput();
+    }
 
-        if (mensagem != null)
-            mensagem.SetActive(true);
+    public void GameOver(Player player)
+    {
+        string[] mensagens;
+        
+        if (bossIA.vivo == true)
+        {
+            
+            mensagens = new string[]
+            {
+            "Então... foi você que conseguiu.",
+            "Eu não estava lutando por vontade própria. A escuridão estava me controlando.",
+            "Obrigado por me libertar. Agora posso descansar em paz."
 
-        // Se já existir coroutine rodando, para ela
-        if (mensagemCoroutine != null)
-            StopCoroutine(mensagemCoroutine);
+            };
 
-        mensagemCoroutine = StartCoroutine(EpicMessageCoroutine(player));
+            player.DesativaInput();
+
+            MostrarMensagem(mensagens, false, () =>
+            {
+                SceneManager.LoadScene("GameOver");
+            });
+        }
+        else
+        {
+            mensagens = new string[]
+            {
+            "Derrote o monstro para que eu possa descansar em paz...!"
+            };
+        }
+        player.DesativaInput();
+
+        MostrarMensagem(mensagens, true, () =>
+        {
+            player.AtivaInput();
+        });
     }
 
     // ===============================
@@ -92,60 +136,87 @@ public class ItemPickup : MonoBehaviour
     // ===============================
     // COROUTINE PRINCIPAL
     // ===============================
-    private IEnumerator EpicMessageCoroutine(Player player)
-    {
-        isTyping = true;
-        Time.timeScale = 0f;
-
-        string[] mensagens = new string[]
-        {
-            "EU, Grande Guerreiro, Fui derrotado... mas o meu poder não se perdeu.",
-            "Pegue o meu Feitiço TrovãoSagrado, a força que derreteu tantos inimigos!",
-            "Aperte R para aceitar o poder!"
-        };
-
-        for (int i = 0; i < mensagens.Length; i++)
-        {
-            yield return StartCoroutine(TypeTextCoroutine(mensagens[i]));
-
-            // Se não for a última mensagem → passa automaticamente
-            if (i < mensagens.Length - 1)
-            {
-                yield return new WaitForSecondsRealtime(tempoEntreFrases);
-            }
-            else
-            {
-                // Última mensagem → espera apertar R
-                while (!Keyboard.current.rKey.wasPressedThisFrame)
-                {
-                    yield return null;
-                }
-            }
-
-        }
-
-        // Finaliza tudo
-        textComponent.text = "";
-        mensagem.SetActive(false);
-
-        Time.timeScale = 1f;
-        player.AtivaInput();
-
-        mensagemCoroutine = null;
-        isTyping = false;
-    }
+    
 
     // ===============================
     // EFEITO DIGITAÇÃO
     // ===============================
     private IEnumerator TypeTextCoroutine(string message)
     {
-        textComponent.text = "";
+        textComponent.text = message;
+        textComponent.ForceMeshUpdate();
 
-        foreach (char letter in message)
+        textComponent.maxVisibleCharacters = 0;
+
+        int totalVisibleCharacters = textComponent.textInfo.characterCount;
+
+        while (textComponent.maxVisibleCharacters < totalVisibleCharacters)
         {
-            textComponent.text += letter;
+            textComponent.maxVisibleCharacters++;
+
+            AudioManager.instance.Play("type");
+
             yield return new WaitForSecondsRealtime(typingSpeed);
         }
     }
+
+    public void MostrarMensagem(string[] mensagens, bool esperarTecla, System.Action onFinish = null)
+    {
+        if (mensagemCoroutine != null)
+            StopCoroutine(mensagemCoroutine);
+
+        mensagemCoroutine = StartCoroutine(MessageCoroutine(mensagens, esperarTecla, onFinish));
+    }
+
+    private IEnumerator MessageCoroutine(string[] mensagens, bool esperarTecla, System.Action onFinish)
+    {
+        isTyping = true;
+        Time.timeScale = 0f;
+
+        mensagem.SetActive(true);
+
+        for (int i = 0; i < mensagens.Length; i++)
+        {
+            yield return StartCoroutine(TypeTextCoroutine(mensagens[i]));
+
+            if (i < mensagens.Length - 1)
+            {
+                yield return new WaitForSecondsRealtime(tempoEntreFrases);
+            }
+            else
+            {
+                if (esperarTecla)
+                {
+                    bool teclaApertada = false;
+
+                    // Loop até o jogador apertar R
+                    while (!teclaApertada)
+                    {
+                        if (Keyboard.current.rKey.wasPressedThisFrame)
+                        {
+                            teclaApertada = true;
+                        }
+                        yield return null;
+                    }
+                }
+                else
+                {
+                    yield return new WaitForSecondsRealtime(2f);
+                }
+            }
+        }
+        
+        textComponent.text = "";
+        mensagem.SetActive(false);
+
+        Time.timeScale = 1f;
+        isTyping = false;
+
+        onFinish?.Invoke(); // EXECUTA AÇÃO FINAL
+    }
+    public void LoadScenes(string cena)
+    {
+        SceneManager.LoadScene(cena);
+    }
+
 }

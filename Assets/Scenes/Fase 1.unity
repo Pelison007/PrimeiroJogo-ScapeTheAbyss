@@ -428,6 +428,7 @@ RectTransform:
   - {fileID: 731612597}
   - {fileID: 1805281780}
   - {fileID: 1058626285}
+  - {fileID: 2029252137}
   m_Father: {fileID: 1553693596}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -989,7 +990,7 @@ MonoBehaviour:
   - {fileID: 731744021}
   - {fileID: 1480821054}
   - {fileID: 822458769}
-  faseAtual: 1
+  faseAtual: 2
 --- !u!4 &82741379
 Transform:
   m_ObjectHideFlags: 0
@@ -1341,7 +1342,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (17)
@@ -1349,7 +1350,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1411,7 +1412,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (13)
@@ -1419,7 +1420,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8601,7 +8602,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (18)
@@ -8609,7 +8610,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8767,7 +8768,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (14)
@@ -8775,7 +8776,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10099,7 +10100,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 82.421, y: -55.189}
+  m_AnchoredPosition: {x: 82.4209, y: -55.188965}
   m_SizeDelta: {x: 63.758, y: 41.822}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &408743234
@@ -10737,7 +10738,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (16)
@@ -10745,7 +10746,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11739,6 +11740,7 @@ MonoBehaviour:
   textComponent: {fileID: 1995500573}
   typingSpeed: 0.05
   tempoEntreFrases: 2
+  bossIA: {fileID: 0}
 --- !u!58 &551360034
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11775,6 +11777,155 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.0018009397, y: -0.10180844}
   m_Radius: 1.0189366
+--- !u!1 &565201761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565201765}
+  - component: {fileID: 565201764}
+  - component: {fileID: 565201763}
+  - component: {fileID: 565201762}
+  m_Layer: 0
+  m_Name: ACABOU
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &565201762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565201761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e289c2768b414484f810390e2abc9145, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
+  itemType: 2
+  pickupCanvas: {fileID: 746814918}
+  mensagem: {fileID: 1553693592}
+  textComponent: {fileID: 1995500573}
+  typingSpeed: 0.05
+  tempoEntreFrases: 2
+  bossIA: {fileID: 1788260067}
+--- !u!58 &565201763
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565201761}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.0018009397, y: -0.10180844}
+  m_Radius: 1.0189366
+--- !u!212 &565201764
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565201761}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 8
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -2072207448, guid: 9943b20c3f25b4743b6e6447e323833e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.8, y: 0.7}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &565201765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565201761}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4003.3, y: -0.84, z: 0}
+  m_LocalScale: {x: -1.26, y: 1.19, z: 1.19}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 746814922}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &581444734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11826,7 +11977,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (9)
@@ -11834,7 +11985,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -12457,6 +12608,159 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 505416750163610329, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
   m_PrefabInstance: {fileID: 186601099}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &678204502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 678204504}
+  - component: {fileID: 678204503}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &678204503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678204502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445792f3262b708409fa6af9916cbbc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  sounds:
+  - name: Principal
+    clip: {fileID: 8300000, guid: 567f31302e0808343904694fab9d003a, type: 3}
+    volume: 0.5
+    pitch: 0.78
+    loop: 1
+    source: {fileID: 0}
+  - name: Coletar Espirito
+    clip: {fileID: 8300000, guid: 8f1c589d69214224d9d972c33ad0755f, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Coletar Vida
+    clip: {fileID: 8300000, guid: fe61d343d58e8ad49bf486f331aafc8f, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pular
+    clip: {fileID: 8300000, guid: 7f7a9fa9b0e0ac141832d043904125b8, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Morte Esqueleto
+    clip: {fileID: 8300000, guid: 42fbb9d224e3f6b44ab41c5b55bf8f42, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MortePlayer
+    clip: {fileID: 8300000, guid: 34de6c0015d7e284ab49f8712fd30cd6, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Respawn
+    clip: {fileID: 8300000, guid: 3caddc07505c33a4e909c8dbb4e3fb93, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AtkEsqueleto
+    clip: {fileID: 8300000, guid: 96f6430e5d4ce5542b7c7bc328bab728, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AtaqueDano
+    clip: {fileID: 8300000, guid: 64a1a6645b7d88d43bcc902e95b3ec3a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: QueimandoFogo
+    clip: {fileID: 8300000, guid: f50e70ab07d583d4aa77147cea164af0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AtaquePlayer
+    clip: {fileID: 8300000, guid: 448816bd95b8f59408794d719f4d9785, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Chovendo
+    clip: {fileID: 8300000, guid: f2717b59c3aaa074d8f5fc4d0a592ab4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SkilTrovao
+    clip: {fileID: 8300000, guid: adb355487cd25db48a02eaef8c57b631, type: 3}
+    volume: 2.5
+    pitch: 1.7
+    loop: 0
+    source: {fileID: 0}
+  - name: type
+    clip: {fileID: 8300000, guid: eececbdbea536ae41b18c6761cecbb43, type: 3}
+    volume: 3
+    pitch: 2.03
+    loop: 0
+    source: {fileID: 0}
+  - name: AtkPertoBoss
+    clip: {fileID: 8300000, guid: 7ed0c5eb0e652b14488335f8e56ff1d6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MorteBoss
+    clip: {fileID: 8300000, guid: 572959f8bd74db24b93c1ac83ba0c5d0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: menu
+    clip: {fileID: 8300000, guid: 2c203de37cc0b144f9ffbd3155fdb5dc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AtkLongeBoss
+    clip: {fileID: 8300000, guid: cadded22a55c0134b9a69c2b555c1cbf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &678204504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678204502}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &681892522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12990,7 +13294,7 @@ Transform:
   m_GameObject: {fileID: 731744020}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.43, y: -0.118070126, z: 0}
+  m_LocalPosition: {x: 0.17, y: 2.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13263,6 +13567,108 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &746814918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 746814922}
+  - component: {fileID: 746814921}
+  - component: {fileID: 746814920}
+  - component: {fileID: 746814919}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &746814919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746814918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &746814920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746814918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &746814921
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746814918}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 519420031}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 8
+  m_TargetDisplay: 0
+--- !u!224 &746814922
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746814918}
+  m_LocalRotation: {x: -0, y: 0.96163076, z: 0, w: 0.27434722}
+  m_LocalPosition: {x: 0, y: 0, z: -0.009608546}
+  m_LocalScale: {x: 0.00065573765, y: 0.00065573765, z: 0.06557377}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 2083259313}
+  m_Father: {fileID: 565201765}
+  m_LocalEulerAnglesHint: {x: 0, y: -2731.846, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.02983941, y: 0.3}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &752516898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13314,7 +13720,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (4)
@@ -13322,7 +13728,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -13761,7 +14167,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (15)
@@ -13769,7 +14175,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -13987,8 +14393,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Porta
   cooldownEntrada: 2
   pontoRespawn: {fileID: 789395482}
-  tipoPorta: 1
-  faseDestino: 0
+  tipoPorta: 3
+  faseDestino: 4
   delayTP: 1.5
   finish: {fileID: 8300000, guid: 3caddc07505c33a4e909c8dbb4e3fb93, type: 3}
 --- !u!82 &789395484
@@ -14244,7 +14650,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (23)
@@ -14252,7 +14658,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -14698,7 +15104,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (24)
@@ -14706,7 +15112,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -15401,7 +15807,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (11)
@@ -15409,7 +15815,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -15796,7 +16202,7 @@ Transform:
   m_GameObject: {fileID: 1041337148}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.82, y: -0.17999983, z: 0}
+  m_LocalPosition: {x: -0.82, y: 2.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15979,7 +16385,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (21)
@@ -15987,7 +16393,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -16096,6 +16502,7 @@ MonoBehaviour:
   textComponent: {fileID: 0}
   typingSpeed: 0.05
   tempoEntreFrases: 2
+  bossIA: {fileID: 0}
 --- !u!50 &1070815727
 Rigidbody2D:
   serializedVersion: 5
@@ -22925,7 +23332,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (10)
@@ -22933,7 +23340,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -23084,7 +23491,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 7
   m_MaskInteraction: 0
   m_Sprite: {fileID: -343670490556062560, guid: bcca43dd926f2a34a8026da8197dfbb1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -23145,7 +23552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Porta
   cooldownEntrada: 2
   pontoRespawn: {fileID: 1181613791}
-  tipoPorta: 1
+  tipoPorta: 2
   faseDestino: 0
   delayTP: 1.5
   finish: {fileID: 8300000, guid: 3caddc07505c33a4e909c8dbb4e3fb93, type: 3}
@@ -23253,7 +23660,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181613790}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -23862,7 +24269,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Um passo a menos para a superficie - FINAL FASE
+  m_text: Um passo a menos para a superficie - BOSS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24853,7 +25260,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (1)
@@ -24861,7 +25268,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -25505,11 +25912,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
---- !u!82 &1399619633 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8672952094289686192, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
-  m_PrefabInstance: {fileID: 163985110747376569}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1434715697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5735112366634160632, guid: 3eb372d911294814cbfc98050376072d, type: 3}
@@ -25923,7 +26325,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (8)
@@ -25931,7 +26333,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -26339,6 +26741,7 @@ GameObject:
   - component: {fileID: 1553693595}
   - component: {fileID: 1553693594}
   - component: {fileID: 1553693593}
+  - component: {fileID: 1553693597}
   m_Layer: 5
   m_Name: MnesagemTrovao
   m_TagString: Untagged
@@ -26429,6 +26832,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1553693597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553693592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0edabab760ca6324e8885a76f60c0456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Menu
 --- !u!1 &1567762690
 GameObject:
   m_ObjectHideFlags: 0
@@ -26568,7 +26983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackHitBox
   Dano: 50
-  audioS: {fileID: 1399619633}
+  audioS: {fileID: 0}
   hitSound: {fileID: 8300000, guid: 96f6430e5d4ce5542b7c7bc328bab728, type: 3}
 --- !u!4 &1585404291 stripped
 Transform:
@@ -26972,7 +27387,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (12)
@@ -26980,7 +27395,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -27021,7 +27436,7 @@ Transform:
   m_GameObject: {fileID: 1639362705}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.344, y: -0.15579987, z: 0}
+  m_LocalPosition: {x: -5.344, y: -0.19, z: 0}
   m_LocalScale: {x: 0.53955, y: 0.728, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27046,8 +27461,8 @@ MonoBehaviour:
   moveUp: 1
   postion_platform1_maior_X: 0
   postion_platform1_menor_X: 0
-  postion_platform2_maior_Y: -0.24
-  postion_platform2_menor_Y: -3.21
+  postion_platform2_maior_Y: 3.32
+  postion_platform2_menor_Y: -0.19
 --- !u!95 &1639362708
 Animator:
   serializedVersion: 7
@@ -27253,7 +27668,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (20)
@@ -27261,7 +27676,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -27305,7 +27720,7 @@ Transform:
   m_GameObject: {fileID: 1656254569}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.63, y: 6.39, z: 0}
+  m_LocalPosition: {x: -11.63, y: 5.923, z: 0}
   m_LocalScale: {x: 0.40172952, y: 0.40940353, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -27417,7 +27832,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 8
   m_MaskInteraction: 0
   m_Sprite: {fileID: -343670490556062560, guid: bcca43dd926f2a34a8026da8197dfbb1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -28803,6 +29218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7d8595b97360a4c80648b9bab77d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossIA
+  vivo: 1
   detectionRange: 5
   moveSpeed: 2
   curaAoDesagregar: 20
@@ -29347,7 +29763,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (2)
@@ -29355,7 +29771,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -29469,6 +29885,143 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1891930979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1891930980}
+  - component: {fileID: 1891930982}
+  - component: {fileID: 1891930981}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1891930980
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891930979}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2029252137}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1891930981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891930979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1891930982
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891930979}
+  m_CullTransparentMesh: 1
 --- !u!1 &1914547294
 GameObject:
   m_ObjectHideFlags: 0
@@ -29611,7 +30164,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (6)
@@ -29619,7 +30172,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -29759,7 +30312,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (19)
@@ -29767,7 +30320,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -30580,6 +31133,154 @@ Transform:
   - {fileID: 591367986}
   m_Father: {fileID: 1719974877}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2029252136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2029252137}
+  - component: {fileID: 2029252141}
+  - component: {fileID: 2029252140}
+  - component: {fileID: 2029252139}
+  - component: {fileID: 2029252138}
+  m_Layer: 5
+  m_Name: ButtonExist
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2029252137
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029252136}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.31648603, y: 0.31648603, z: 0.31648603}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1891930980}
+  m_Father: {fileID: 20013397}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.5479801, y: -42.41487}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2029252138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029252136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1fcf118d9e2b8e4b8b23ab7547197db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonSound
+  hoverSound: {fileID: 8300000, guid: d2b16104e8862c743b5aa9d8a5a65213, type: 3}
+  clickSound: {fileID: 8300000, guid: ecfdd238830325b45866762827e027c2, type: 3}
+--- !u!114 &2029252139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029252136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 1700192620017014457, guid: 3f82a2948102d7e40ada63bcb2fdfd8b, type: 3}
+    m_PressedSprite: {fileID: 1700192620017014457, guid: 3f82a2948102d7e40ada63bcb2fdfd8b, type: 3}
+    m_SelectedSprite: {fileID: 1700192620017014457, guid: 3f82a2948102d7e40ada63bcb2fdfd8b, type: 3}
+    m_DisabledSprite: {fileID: -6316473585962384903, guid: 3f82a2948102d7e40ada63bcb2fdfd8b, type: 3}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2029252140}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1553693597}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: LoadScenes
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: GameOver
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2029252140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029252136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -6316473585962384903, guid: 3f82a2948102d7e40ada63bcb2fdfd8b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2029252141
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029252136}
+  m_CullTransparentMesh: 1
 --- !u!4 &2030652786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5735112366634160632, guid: 3eb372d911294814cbfc98050376072d, type: 3}
@@ -31007,7 +31708,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (5)
@@ -31015,7 +31716,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -31026,6 +31727,143 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
+--- !u!1 &2083259312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2083259313}
+  - component: {fileID: 2083259315}
+  - component: {fileID: 2083259314}
+  m_Layer: 5
+  m_Name: PegarItem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2083259313
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083259312}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 746814922}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -25, y: 543}
+  m_SizeDelta: {x: 859.6, y: 549.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2083259314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083259312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Aperte <color=#FFD700>E</color> para AVAN\xC7AR"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 250
+  m_fontSizeBase: 250
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -566.79675, y: -224.65619, z: -771.696, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2083259315
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083259312}
+  m_CullTransparentMesh: 1
 --- !u!1 &2108182520
 GameObject:
   m_ObjectHideFlags: 0
@@ -31051,7 +31889,7 @@ Transform:
   m_GameObject: {fileID: 2108182520}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.00203, y: -3.5929, z: 0}
+  m_LocalPosition: {x: -33.00203, y: -0.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31170,7 +32008,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (22)
@@ -31178,7 +32016,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -31416,7 +32254,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto (3)
@@ -31424,7 +32262,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -31460,6 +32298,10 @@ PrefabInstance:
       value: -0.008080907
       objectReference: {fileID: 0}
     - target: {fileID: 2505979882206269587, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
+      propertyPath: audioS
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2505979882206269587, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: Sounds.Array.size
       value: 10
       objectReference: {fileID: 0}
@@ -31489,11 +32331,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4160891872025936049, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4007.314
+      value: 4004.33
       objectReference: {fileID: 0}
     - target: {fileID: 4160891872025936049, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.288
+      value: -0.85
       objectReference: {fileID: 0}
     - target: {fileID: 4160891872025936049, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31790,7 +32632,7 @@ PrefabInstance:
     - target: {fileID: 7607642552205304681, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: SomPlayer
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 7607642552205304681, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: SkilTrovao
       value: 
@@ -31811,7 +32653,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8672952094289686192, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5220894483560395282, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
     m_AddedGameObjects:
@@ -31977,7 +32820,7 @@ PrefabInstance:
     - target: {fileID: 2973076841703613562, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 4611230461137589107, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_Name
       value: MobEsqueleto
@@ -31985,7 +32828,7 @@ PrefabInstance:
     - target: {fileID: 6950976667116587022, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: audioS
       value: 
-      objectReference: {fileID: 1399619633}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836765758409398435, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -32001,6 +32844,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 678204504}
   - {fileID: 163985110747376569}
   - {fileID: 619394802}
   - {fileID: 1395137553}
@@ -32020,4 +32864,5 @@ SceneRoots:
   - {fileID: 1005200298}
   - {fileID: 1776365688}
   - {fileID: 551360032}
+  - {fileID: 565201765}
   - {fileID: 1553693596}

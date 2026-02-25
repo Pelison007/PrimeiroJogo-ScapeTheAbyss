@@ -101,6 +101,7 @@ public class Porta : MonoBehaviour
 
         if (FaseManager.fm != null)
         {
+            Debug.Log(FaseManager.fm);
             switch (tipoPorta)
             {
                 case TipoPorta.ProximaFase:
@@ -117,6 +118,7 @@ public class Porta : MonoBehaviour
 
                 case TipoPorta.UltimaFase:
                     Debug.Log("Última fase!");
+                    FaseManager.fm.ProximaFase(playerTransform);
                     break;
             }
 

@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
 {
     public static GameController gc;
     private HealthBar healthBarr;
+    public static Porta porta;
     // Dentro da Unity
     public TextMeshProUGUI SpiritText;
     public TextMeshProUGUI ContagemEsqueletoText;
@@ -28,6 +29,9 @@ public class GameController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
+        AudioManager.instance.Stop("menu");
+        AudioManager.instance.Play("Principal");
+
         if(gc == null)
         {
             gc = this;
@@ -40,9 +44,9 @@ public class GameController : MonoBehaviour
         Debug.Log("GameController iniciou");
 
         int faseAtual = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
-        NextLevelText.text = $"Um passo a menos para a superficie - Fase {faseAtual + 1}";
+        NextLevelText.text = $"Um passo a menos para a superficie - Fase {faseAtual}";
         VoltarFaseText.text = $"Descendo... Fase {faseAtual}";
-        healthBarr = HealthBar.HealthBarr;
+        healthBarr = HealthBar.HealthBarr; 
         TotalSpirit = GameObject.FindGameObjectsWithTag("Spirit").Length;
         totalEsqueleto = GameObject.FindGameObjectsWithTag("Inimigo").Length;
         MostrarScreen();

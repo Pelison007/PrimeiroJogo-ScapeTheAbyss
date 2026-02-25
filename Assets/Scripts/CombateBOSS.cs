@@ -40,6 +40,7 @@ public class CombateBOSS : MonoBehaviour
         lastAttackPerto = Time.time;
         isAttacking = true;
         anim.SetTrigger("BossAtkPerto");
+        AudioManager.instance.Play("AtkPertoBoss");
 
         // **Não aplicar dano aqui!**
         Debug.Log("Boss começou ataque de perto!");
@@ -74,6 +75,7 @@ public class CombateBOSS : MonoBehaviour
             lastAttackLonge = Time.time;
             isAttacking = true;
             anim.SetTrigger("BossAtkMagia");
+            AudioManager.instance.Play("AtkLongeBoss");
             Debug.Log("Lançou Guspe");
 
             // Instancia o projétil da magia

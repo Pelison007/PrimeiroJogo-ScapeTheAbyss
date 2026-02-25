@@ -68,9 +68,7 @@ public class GotaSpawn : MonoBehaviour
 
         if (!audioAtivo)
         {
-            audioAtivo = true;
-            if (!audioChuva.isPlaying)
-                audioChuva.Play();
+            AudioManager.instance.Play("Chovendo");
         }
     }
 
@@ -89,7 +87,7 @@ public class GotaSpawn : MonoBehaviour
         if (audioAtivo)
         {
             audioAtivo = false;
-            audioChuva.Stop();
+            AudioManager.instance.Stop("Chovendo");
         }
     }
 

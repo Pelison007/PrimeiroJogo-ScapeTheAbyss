@@ -46,10 +46,6 @@ public class EnemyAI : MonoBehaviour
     float idleTimer;
     float attackCooldown;
 
-    // som
-    public AudioSource audioS;
-    public AudioClip Morte;
-
 
     void Start()
     {
@@ -320,10 +316,7 @@ public class EnemyAI : MonoBehaviour
         vivo = false;
         isAttacking = false;
 
-        if (audioS != null && Morte != null)
-        {
-            audioS.PlayOneShot(Morte, 1f);
-        }
+        AudioManager.instance.Play("Morte Esqueleto");
 
         // Toca animação de morte
         if (anim != null)

@@ -4,9 +4,7 @@ public class EsqueletoAttak : MonoBehaviour
 {
     public EsqueletoAttak hitbox;   // arraste o hitbox no Inspector
     public int Dano = 20;
-    public AudioSource audioS;
-    public AudioClip hitSound;
-    public AudioClip Naoacerto;
+
 
     [HideInInspector]
     public bool acertouPlayer = false;
@@ -32,9 +30,8 @@ public class EsqueletoAttak : MonoBehaviour
                 jaDeuDano = true;
                 acertouPlayer = true;
 
-                if (audioS != null && hitSound != null)
-                    audioS.PlayOneShot(hitSound, 1f);
-            }
+                AudioManager.instance.Play("AtaqueDano");
+            } 
         }
     }
 

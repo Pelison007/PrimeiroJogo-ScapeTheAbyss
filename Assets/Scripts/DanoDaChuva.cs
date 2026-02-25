@@ -7,8 +7,6 @@ public class DanoDaChuva : MonoBehaviour
     public int dano = 10;
     private bool ativaParaDano = true;
 
-    [Header("Audio")]
-    public AudioSource audioS;       // AudioSource no prefab da gota
 
     private Rigidbody2D rb;
     private void Awake()
@@ -60,9 +58,10 @@ public class DanoDaChuva : MonoBehaviour
             if (health != null)
             {
                 health.TakeDamage(dano);
-                if (audioS != null)
-                    playerHit.PlayerSound(9);
+                
+                AudioManager.instance.Play("QueimandoFogo");
             }
+            
 
             // Para a gota ao colidir com o Player
             if (rb != null)
