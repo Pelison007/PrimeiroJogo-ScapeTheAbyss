@@ -71,6 +71,9 @@ public class Player :MonoBehaviour
         animacao = GetComponent<Animator>();
 
         GameController.gc.RefreshScreen();
+
+            if (ultimoRespawn == Vector2.zero)
+                ultimoRespawn = transform.position;
     }
     public void DesativaInput()
     {
@@ -262,10 +265,9 @@ public class Player :MonoBehaviour
     public void AtualizaRespawn(Vector2 pos)
     {
         ultimoRespawn = pos;
+        SalvarPlayer();
+        Debug.Log("Respawn atualizado para: " + ultimoRespawn);
     }
-
-
-
 
     // USAR GUARDA CHUVA
 
@@ -381,6 +383,27 @@ public class Player :MonoBehaviour
     public bool TemTrovao()
     {
         return temTrovao;
+    }
+
+    // ---- salvar -----
+
+    public void SalvarPlayer()
+    {
+        PlayerPrefs.SetInt("hasUmbrella", hasUmbrella ? 1 : 0);
+        PlayerPrefs.SetInt("TemTrovao", temTrovao ? 1 : 0);
+        PlayerPrefs.SetFloat("RespawnX", ultimoRespawn.x);
+        PlayerPrefs.SetFloat("RespawnY", ultimoRespawn.y);
+        PlayerPrefs.Save();
+    }
+
+    public void CarregarPlayer()
+    {
+        hasUmbrella = PlayerPrefs.GetInt("hasUmbrella", 0) == 1;
+        temTrovao = PlayerPrefs.GetInt("TemTrovao", 0) == 1;
+
+        float x = PlayerPrefs.GetFloat("RespawnX", transform.position.x);
+        float y = PlayerPrefs.GetFloat("RespawnY", transform.position.y);
+        ultimoRespawn = new Vector2(x, y);
     }
 }
 

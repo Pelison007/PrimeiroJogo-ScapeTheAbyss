@@ -1,14 +1,16 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.Collections;
 
 public class GameController : MonoBehaviour
 {
     public static GameController gc;
     private HealthBar healthBarr;
     public static Porta porta;
+    public Player player;
     // Dentro da Unity
     public TextMeshProUGUI SpiritText;
     public TextMeshProUGUI ContagemEsqueletoText;
@@ -27,43 +29,57 @@ public class GameController : MonoBehaviour
     public int esqueleto = 0;
     public int totalEsqueleto = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+    private void Awake()
     {
-        AudioManager.instance.Stop("menu");
-        AudioManager.instance.Play("Principal");
-
-        if(gc == null)
+        // Singleton
+        if (gc == null)
         {
             gc = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
+
+            // Carrega progresso geral
+            CarregarProgresso();
         }
-        else if(gc != this)
+        else if (gc != this)
         {
             Destroy(gameObject);
+            return;
         }
-        Debug.Log("GameController iniciou");
-
-        int faseAtual = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
-        NextLevelText.text = $"Um passo a menos para a superficie - Fase {faseAtual}";
-        VoltarFaseText.text = $"Descendo... Fase {faseAtual}";
-        healthBarr = HealthBar.HealthBarr; 
-        TotalSpirit = GameObject.FindGameObjectsWithTag("Spirit").Length;
-        totalEsqueleto = GameObject.FindGameObjectsWithTag("Inimigo").Length;
-        MostrarScreen();
-        RefreshScreen();
     }
-
-    public void SetLives(int life)
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        lifes += life;
-        if (lifes >= 0) 
-        RefreshScreen();
+        if (!scene.name.Contains("Menu"))
+        {
+            // Pega o player da cena
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+            if (player != null)
+            {
+                player.CarregarPlayer(); // aplica variáveis salvas
+                player.transform.position = player.ultimoRespawn; // aplica checkpoint
+            }
+
+            // Conta todos os objetos da cena (ativos)
+            TotalSpirit = GameObject.FindGameObjectsWithTag("Spirit").Length;
+            totalEsqueleto = GameObject.FindGameObjectsWithTag("Inimigo").Length;
+
+            // Carrega variáveis que mudaram, mas não o total
+            Spirit = PlayerPrefs.GetInt("Spirit", Spirit);
+            esqueleto = PlayerPrefs.GetInt("Esqueleto", esqueleto);
+            lifes = PlayerPrefs.GetInt("Lifes", lifes);
+
+            RefreshScreen();
+            MostrarScreen();
+            Debug.Log("Cena carregada: " + scene.name);
+            Debug.Log("Total Spirit na cena: " + TotalSpirit);
+            Debug.Log("Total Esqueleto na cena: " + totalEsqueleto);
+        }
     }
 
     public void RefreshScreen()
     {
-        SpiritText.text = Spirit.ToString() + " / " + TotalSpirit.ToString();
-        ContagemEsqueletoText.text = esqueleto.ToString() + " / " + totalEsqueleto.ToString();
+        SpiritText.text = Spirit + " / " + TotalSpirit;
+        ContagemEsqueletoText.text = esqueleto + " / " + totalEsqueleto;
         LifeText.text = lifes.ToString();
     }
 
@@ -105,4 +121,47 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(segundos);
         NextLevelText.gameObject.SetActive(false);
     }
+
+    // ------------------- Salvar e Carregar -------------------
+    public void SalvarProgresso()
+    {
+        PlayerPrefs.SetInt("Spirit", Spirit);
+        PlayerPrefs.SetInt("TotalSpirit", TotalSpirit);
+        PlayerPrefs.SetInt("Esqueleto", esqueleto);
+        PlayerPrefs.SetInt("TotalEsqueleto", totalEsqueleto);
+        PlayerPrefs.SetInt("Lifes", lifes);
+
+        PlayerPrefs.SetInt("FaseAtual", SceneManager.GetActiveScene().buildIndex);
+
+        if (player != null)
+            player.SalvarPlayer();
+
+        PlayerPrefs.Save();
+        Debug.Log("Progresso salvo!");
+    }
+
+    public void CarregarProgresso()
+    {
+        Spirit = PlayerPrefs.GetInt("Spirit", Spirit);
+        TotalSpirit = PlayerPrefs.GetInt("TotalSpirit", TotalSpirit);
+        esqueleto = PlayerPrefs.GetInt("Esqueleto", esqueleto);
+        totalEsqueleto = PlayerPrefs.GetInt("TotalEsqueleto", totalEsqueleto);
+        lifes = PlayerPrefs.GetInt("Lifes", lifes);
+    }
+
+    public void RestartGame()
+    {
+        PlayerPrefs.DeleteAll(); // apaga todo o progresso
+        SceneManager.LoadScene("GameOver"); // carrega primeira fase
+        Debug.Log("Jogo reiniciado!");
+    }
+
+    // ------------------- Vidas -------------------
+    public void SetLives(int life)
+    {
+        lifes += life;
+        if (lifes < 0) lifes = 0;
+        RefreshScreen();
+    }
+
 }

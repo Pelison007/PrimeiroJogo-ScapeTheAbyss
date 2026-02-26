@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -20,8 +20,8 @@ public class PlayerHealth: Health
     public float cura= 27;
     public float duracaoCura = 10f;
 
-    public float intervaloCura = 3f; // tempo entre curas automáticas
-    private float proximaCura = 0f;  // momento da próxima cura
+    public float intervaloCura = 3f; // tempo entre curas automÃ¡ticas
+    private float proximaCura = 0f;  // momento da prÃ³xima cura
 
     protected override void Awake()
     {
@@ -48,11 +48,11 @@ public class PlayerHealth: Health
     {
         GameController.gc.RefreshScreen();
 
-        // Checa se já passou o intervalo de cura
+        // Checa se jÃ¡ passou o intervalo de cura
         if (Time.time >= proximaCura)
         {
             HealOverTime(cura, duracaoCura); // chama a cura gradual
-            proximaCura = Time.time + intervaloCura; // agenda próxima cura
+            proximaCura = Time.time + intervaloCura; // agenda prÃ³xima cura
         }
     }
 
@@ -69,7 +69,7 @@ public class PlayerHealth: Health
     {
         if (vivo)
         {
-            LoseLife(); // chama função de perder vida
+            LoseLife(); // chama funÃ§Ã£o de perder vida
         }
     }
 
@@ -95,21 +95,26 @@ public class PlayerHealth: Health
             vivo = false;
             AudioManager.instance.Play("MortePlayer");
             rb.linearVelocity = Vector2.zero; // velociddade vai pra 0
-            rb.bodyType = RigidbodyType2D.Kinematic; // para nao ser afetado GRAVIDADE e outras forças
+            rb.bodyType = RigidbodyType2D.Kinematic; // para nao ser afetado GRAVIDADE e outras forÃ§as
             col.enabled = false; // desativa colisor
-            anim.SetTrigger("Morto"); // animação de morto
+            anim.SetTrigger("Morto"); // animaÃ§Ã£o de morto
             player.enabled = false; // desativa player
             GameController.gc.SetLives(-1);
 
 
-            if (GameController.gc.lifes >= 0)
+            if (GameController.gc.lifes > 0)
             {
                 Invoke("Respawn", 1.5f);
             }
             else
             {
-                Invoke("LoadGameOver", 1f);
+                // Zerou â†’ reset completo
+                PlayerPrefs.DeleteAll();
+                PlayerPrefs.Save();
                 GameController.gc.RetirarScreen();
+
+                // Vai direto para a cena GameOver
+                Invoke(nameof(LoadGameOver), 2f);
             }
         }
     }
@@ -117,7 +122,7 @@ public class PlayerHealth: Health
     void Respawn()
     {
         vivo = true;
-        // Volta a vida ao máximo e atualiza a barra
+        // Volta a vida ao mÃ¡ximo e atualiza a barra
         health.vidaAtual = health.vidaMaxima;
         if (healthBar != null)
             healthBar.SetHealth(health.vidaAtual);
@@ -129,8 +134,8 @@ public class PlayerHealth: Health
         rb.linearVelocity = Vector2.zero; // velocidade vai pra zero
         col.enabled = true; // reativa colisor do player
         player.enabled = true; // reativa o player
-        anim.ResetTrigger("Morto"); // para animação de morte
-        anim.Play("AnimParado"); // play animação parado
+        anim.ResetTrigger("Morto"); // para animaÃ§Ã£o de morte
+        anim.Play("AnimParado"); // play animaÃ§Ã£o parado
 
         // REATIVA os comandos do Player
         if (player != null)
@@ -149,4 +154,5 @@ public class PlayerHealth: Health
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
 }

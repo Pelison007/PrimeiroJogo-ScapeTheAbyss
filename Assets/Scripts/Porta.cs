@@ -124,6 +124,7 @@ public class Porta : MonoBehaviour
 
             if (player != null && pontoRespawn != null)
                 player.AtualizaRespawn(pontoRespawn.position);
+                
         }
 
         CameraFollow camFollow = Camera.main.GetComponent<CameraFollow>();

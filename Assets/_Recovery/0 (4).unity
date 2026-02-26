@@ -1088,8 +1088,8 @@ RectTransform:
   m_GameObject: {fileID: 98759850}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.36, y: 1.36, z: 1.36}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 869489649}
   - {fileID: 894579536}
@@ -10476,7 +10476,7 @@ GameObject:
   - component: {fileID: 429337464}
   - component: {fileID: 429337461}
   - component: {fileID: 429337465}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AreaDeChuvaFASE1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15238,7 +15238,7 @@ RectTransform:
   m_GameObject: {fileID: 869489648}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.09, y: 1.09, z: 1.09}
+  m_LocalScale: {x: 0.79, y: 0.79, z: 0.79}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 392839226}
@@ -15246,7 +15246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.5, y: 65}
+  m_AnchoredPosition: {x: -2.5, y: 86.89401}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &869489650
@@ -15547,7 +15547,7 @@ RectTransform:
   m_GameObject: {fileID: 894579535}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.09, y: 1.09, z: 1.09}
+  m_LocalScale: {x: 0.79, y: 0.79, z: 0.79}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1238755226}
@@ -15555,7 +15555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.3, y: 17.405972}
+  m_AnchoredPosition: {x: -3.3, y: 39.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &894579537
@@ -26029,6 +26029,15 @@ MonoBehaviour:
   player: {fileID: 163985110747376570}
   pauseMenu: {fileID: 98759850}
   isPaused: 0
+  pauseAction:
+    m_Name: Pause
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 1a6114fc-488c-4b7d-a063-ed0f262d85b6
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   playerInput: {fileID: 1399619632}
 --- !u!114 &1395137555
 MonoBehaviour:
@@ -27200,7 +27209,7 @@ GameObject:
   - component: {fileID: 1574577386}
   - component: {fileID: 1574577387}
   - component: {fileID: 1574577388}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: HitBoxPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32627,11 +32636,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4160891872025936049, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.633
+      value: -8.53
       objectReference: {fileID: 0}
     - target: {fileID: 4160891872025936049, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.532
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4160891872025936049, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32730,10 +32739,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4382684642601500042, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
-      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4382684642601500042, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
@@ -32792,10 +32797,6 @@ PrefabInstance:
     - target: {fileID: 4382684642601500042, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: m_ActionEvents.Array.data[24].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4382684642601500042, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
-      propertyPath: m_ActionEvents.Array.data[11].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PauseGame
       objectReference: {fileID: 0}
     - target: {fileID: 4382684642601500042, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -33147,7 +33148,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1541491951}
   - {fileID: 519420032}
   - {fileID: 678204504}
   - {fileID: 163985110747376569}
@@ -33155,6 +33155,7 @@ SceneRoots:
   - {fileID: 1395137553}
   - {fileID: 1151572925}
   - {fileID: 82741379}
+  - {fileID: 1541491951}
   - {fileID: 1377044688}
   - {fileID: 1040428206}
   - {fileID: 1693389749}
