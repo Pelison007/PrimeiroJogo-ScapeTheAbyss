@@ -4,20 +4,34 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuUI : MonoBehaviour
 {
+    [Header("Referências")]
     public Player player;
     public GameObject pauseMenu;
-    public bool isPaused = false;
 
+    [Header("Input System")]
     public PlayerInput playerInput;
+
+    [HideInInspector]
+    public bool isPaused = false;
 
     private void OnEnable()
     {
-        playerInput.actions["Pause"].performed += TogglePause; // “Pause” é o nome da action no InputActionAsset
+        if (playerInput != null && playerInput.actions != null)
+        {
+            var pauseAction = playerInput.actions["Pause"];
+            if (pauseAction != null)
+                pauseAction.performed += TogglePause;
+        }
     }
 
     private void OnDisable()
     {
-        playerInput.actions["Pause"].performed -= TogglePause;
+        if (playerInput != null && playerInput.actions != null)
+        {
+            var pauseAction = playerInput.actions["Pause"];
+            if (pauseAction != null)
+                pauseAction.performed -= TogglePause;
+        }
     }
 
     private void TogglePause(InputAction.CallbackContext ctx)
@@ -30,34 +44,47 @@ public class PauseMenuUI : MonoBehaviour
 
     public void PauseGame()
     {
-        pauseMenu.SetActive(true);
+        if (pauseMenu != null)
+            pauseMenu.SetActive(true);
+
         Time.timeScale = 0f;
         isPaused = true;
-        player.DesativaInput();
+
+        if (player != null)
+            player.DesativaInput();
     }
 
     public void ResumeGame()
     {
-        pauseMenu.SetActive(false);
+        if (pauseMenu != null)
+            pauseMenu.SetActive(false);
+
         Time.timeScale = 1f;
         isPaused = false;
-        player.AtivaInput();
+
+        if (player != null)
+            player.AtivaInput();
     }
 
     public void QuitToMenu()
     {
-        // Salva progresso do player
         if (player != null)
             player.SalvarPlayer();
 
-        // Salva progresso do GameController
-        GameController.gc.SalvarProgresso();
+        if (GameController.gc != null)
+        {
+            GameController.gc.SalvarProgresso();
+            GameController.gc.RetirarScreen();
+        }
 
+        if (pauseMenu != null)
+            pauseMenu.SetActive(false);
 
-        pauseMenu.SetActive(false);
-        GameController.gc.RetirarScreen();
         Time.timeScale = 1f;
-        AudioManager.instance.Stop("Principal");
+
+        if (AudioManager.instance != null)
+            AudioManager.instance.Stop("Principal");
+
         SceneManager.LoadScene("Menu");
     }
 }

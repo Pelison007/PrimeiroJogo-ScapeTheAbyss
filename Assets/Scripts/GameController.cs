@@ -52,7 +52,11 @@ public class GameController : MonoBehaviour
         if (!scene.name.Contains("Menu"))
         {
             // Pega o player da cena
-            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+            if (player == null)
+            {
+                GameObject p = GameObject.FindGameObjectWithTag("Player");
+                if (p != null) player = p.GetComponent<Player>();
+            }
             if (player != null)
             {
                 player.CarregarPlayer(); // aplica variáveis salvas

@@ -973,6 +973,177 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458982879}
   m_CullTransparentMesh: 1
+--- !u!1 &559260158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 559260160}
+  - component: {fileID: 559260159}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &559260159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559260158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445792f3262b708409fa6af9916cbbc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  sounds:
+  - name: Principal
+    clip: {fileID: 8300000, guid: 567f31302e0808343904694fab9d003a, type: 3}
+    volume: 0.5
+    pitch: 0.78
+    loop: 1
+    source: {fileID: 0}
+  - name: Coletar Espirito
+    clip: {fileID: 8300000, guid: 8f1c589d69214224d9d972c33ad0755f, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Coletar Vida
+    clip: {fileID: 8300000, guid: fe61d343d58e8ad49bf486f331aafc8f, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Pular
+    clip: {fileID: 8300000, guid: 7f7a9fa9b0e0ac141832d043904125b8, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Morte Esqueleto
+    clip: {fileID: 8300000, guid: 42fbb9d224e3f6b44ab41c5b55bf8f42, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MortePlayer
+    clip: {fileID: 8300000, guid: 1ffbe251878ec074f8e4d3754a2f1e17, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Respawn
+    clip: {fileID: 8300000, guid: 3caddc07505c33a4e909c8dbb4e3fb93, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AtkEsqueleto
+    clip: {fileID: 8300000, guid: 96f6430e5d4ce5542b7c7bc328bab728, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AtaqueDano
+    clip: {fileID: 8300000, guid: 64a1a6645b7d88d43bcc902e95b3ec3a, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: QueimandoFogo
+    clip: {fileID: 8300000, guid: f50e70ab07d583d4aa77147cea164af0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AtaquePlayer
+    clip: {fileID: 8300000, guid: 448816bd95b8f59408794d719f4d9785, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Chovendo
+    clip: {fileID: 8300000, guid: f2717b59c3aaa074d8f5fc4d0a592ab4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SkilTrovao
+    clip: {fileID: 8300000, guid: adb355487cd25db48a02eaef8c57b631, type: 3}
+    volume: 2.5
+    pitch: 1.7
+    loop: 0
+    source: {fileID: 0}
+  - name: type
+    clip: {fileID: 8300000, guid: eececbdbea536ae41b18c6761cecbb43, type: 3}
+    volume: 3
+    pitch: 2.03
+    loop: 0
+    source: {fileID: 0}
+  - name: AtkPertoBoss
+    clip: {fileID: 8300000, guid: 7ed0c5eb0e652b14488335f8e56ff1d6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MorteBoss
+    clip: {fileID: 8300000, guid: 572959f8bd74db24b93c1ac83ba0c5d0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: menu
+    clip: {fileID: 8300000, guid: 2c203de37cc0b144f9ffbd3155fdb5dc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AtkLongeBoss
+    clip: {fileID: 8300000, guid: cadded22a55c0134b9a69c2b555c1cbf, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Button
+    clip: {fileID: 8300000, guid: d2b16104e8862c743b5aa9d8a5a65213, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: ecfdd238830325b45866762827e027c2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AcertouEsqueleto
+    clip: {fileID: 8300000, guid: 96f6430e5d4ce5542b7c7bc328bab728, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &559260160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559260158}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &560423763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2463,3 +2634,4 @@ SceneRoots:
   - {fileID: 572220763}
   - {fileID: 381274240}
   - {fileID: 705597611}
+  - {fileID: 559260160}
