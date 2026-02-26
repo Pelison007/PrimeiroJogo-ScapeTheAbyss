@@ -26846,6 +26846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d19ad3fdc0810d44ac8e37f486ab036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameController
+  faseAtual: 0
   player: {fileID: 163985110747376570}
   SpiritText: {fileID: 408743235}
   ContagemEsqueletoText: {fileID: 1935625832}
@@ -32627,7 +32628,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4160891872025936049, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.633
+      value: -8.55
       objectReference: {fileID: 0}
     - target: {fileID: 4160891872025936049, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: m_LocalPosition.y

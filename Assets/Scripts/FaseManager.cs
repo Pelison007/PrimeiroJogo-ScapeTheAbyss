@@ -8,6 +8,7 @@ public class FaseManager : MonoBehaviour
 
     public Transform[] spawnsFases;
     public int faseAtual;
+    private GameController gc;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -20,10 +21,11 @@ public class FaseManager : MonoBehaviour
         {
             Destroy(gameObject); // evita múltiplos FaseManager
         }
+        gc = GameController.gc;
     }
-    void Update()
+    void Start()
     {
-        
+        faseAtual = PlayerPrefs.GetInt("FaseAtual", 0);
     }
     public void IrParaFase(int faseDestino, Transform player)
     {

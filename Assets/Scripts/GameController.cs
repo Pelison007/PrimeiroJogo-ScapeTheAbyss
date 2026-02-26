@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public int faseAtual;
     public static GameController gc;
     private HealthBar healthBarr;
     public static Porta porta;
@@ -134,6 +135,7 @@ public class GameController : MonoBehaviour
         PlayerPrefs.SetInt("Esqueleto", esqueleto);
         PlayerPrefs.SetInt("TotalEsqueleto", totalEsqueleto);
         PlayerPrefs.SetInt("Lifes", lifes);
+        PlayerPrefs.SetInt("FaseAtual", faseAtual);
 
         PlayerPrefs.SetInt("FaseAtual", SceneManager.GetActiveScene().buildIndex);
 
@@ -151,6 +153,8 @@ public class GameController : MonoBehaviour
         esqueleto = PlayerPrefs.GetInt("Esqueleto", esqueleto);
         totalEsqueleto = PlayerPrefs.GetInt("TotalEsqueleto", totalEsqueleto);
         lifes = PlayerPrefs.GetInt("Lifes", lifes);
+
+        faseAtual = PlayerPrefs.GetInt("FaseAtual", 0);
     }
 
     public void RestartGame()
