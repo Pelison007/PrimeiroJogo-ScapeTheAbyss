@@ -123,10 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EsqueletoAttak
   hitbox: {fileID: 2973076841703613562}
-  Dano: 20
-  audioS: {fileID: 0}
-  hitSound: {fileID: 8300000, guid: 64a1a6645b7d88d43bcc902e95b3ec3a, type: 3}
-  Naoacerto: {fileID: 8300000, guid: 39c5b22be567ae442b2bebc8af14f3be, type: 3}
+  Dano: 50
   acertouPlayer: 0
 --- !u!1 &3891522386752134640
 GameObject:
@@ -385,8 +382,6 @@ MonoBehaviour:
   walkDistance: 3
   aggroRange: 5
   attackRange: 0.7
-  audioS: {fileID: 0}
-  Morte: {fileID: 8300000, guid: 42fbb9d224e3f6b44ab41c5b55bf8f42, type: 3}
 --- !u!114 &5738591315376080594
 MonoBehaviour:
   m_ObjectHideFlags: 0

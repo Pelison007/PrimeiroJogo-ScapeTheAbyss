@@ -72,7 +72,7 @@ public class ItemPickup : MonoBehaviour
     {
         string[] mensagens;
         
-        if (bossIA.vivo == true)
+        if (!bossIA.vivo)
         {
             
             mensagens = new string[]

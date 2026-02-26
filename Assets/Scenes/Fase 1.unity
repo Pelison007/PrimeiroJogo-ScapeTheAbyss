@@ -26028,8 +26028,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuUI
   player: {fileID: 163985110747376570}
   pauseMenu: {fileID: 98759850}
-  isPaused: 0
   playerInput: {fileID: 1399619632}
+  isPaused: 0
 --- !u!114 &1395137555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29531,7 +29531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705f8e8fb3ae58443b160d86037c166a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealtBOSS
-  vidaMaxima: 1000
+  vidaMaxima: 1200
   vidaAtual: 0
   healthBar: {fileID: 473543714}
   bossIA: {fileID: 1788260067}
@@ -29569,11 +29569,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CombateBOSS
   attackRangePerto: 2
   attackCooldownPerto: 2
-  danoMelle: 20
-  attackRangeLonge: 4
+  danoMelle: 65
+  attackRangeLonge: 5
   attackCooldownLonge: 6
-  velocidadeMagia: 6
-  danoMagia: 40
+  velocidadeMagia: 7
+  danoMagia: 45
   SwpawnProjetilGuspe: {fileID: 738054118}
   PrefabGuspe: {fileID: 7043895301194545017, guid: 585f1875175b5cd46b3ddefa8e2f56be, type: 3}
   isAttacking: 0
@@ -32263,11 +32263,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 505416750163610329, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 996.7
+      value: 993.49
       objectReference: {fileID: 0}
     - target: {fileID: 505416750163610329, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.0742002
+      value: 4.18
       objectReference: {fileID: 0}
     - target: {fileID: 505416750163610329, guid: d3d6ed64c78253744b6237d19b498eb6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32867,7 +32867,7 @@ PrefabInstance:
       objectReference: {fileID: 739205444}
     - target: {fileID: 5415012647961137247, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: vidaMaxima
-      value: 500
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 6090107488990718366, guid: 3d2d444fc9fc6114f9a1063b40c7808f, type: 3}
       propertyPath: m_Size.x
