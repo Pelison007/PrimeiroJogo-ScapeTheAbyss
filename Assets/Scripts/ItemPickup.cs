@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using TMPro;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -18,9 +20,11 @@ public class ItemPickup : MonoBehaviour
     public ItemType itemType;
 
     [Header("UI")]
+    public Menu menu;
     public GameObject pickupCanvas;
     public GameObject mensagem;
     public TMP_Text textComponent;
+    public Button[] buttons;
 
     [Header("Configuração Texto")]
     public float typingSpeed = 0.05f;
@@ -52,6 +56,8 @@ public class ItemPickup : MonoBehaviour
     // ===============================
     public void ColetarTrovaoSkill(Player player)
     {
+        player.temTrovao = true;
+        player.SalvarPlayer(); // 👈 ESSENCIAL
         string[] mensagens =
         {
             "EU, Grande Guerreiro, Fui derrotado... mas o meu poder não se perdeu.",
@@ -61,7 +67,6 @@ public class ItemPickup : MonoBehaviour
 
         MostrarMensagem(mensagens, true, () =>
         {
-            player.temTrovao = true;
             player.AtivaInput();
         });
 
@@ -89,13 +94,24 @@ public class ItemPickup : MonoBehaviour
             {
                 SceneManager.LoadScene("GameOver");
             });
+
+            foreach (Button btn in buttons)
+            {
+                btn.gameObject.SetActive(true); // Mostra cada botão
+            }
         }
+
         else
         {
             mensagens = new string[]
             {
             "Derrote o monstro para que eu possa descansar em paz...!"
             };
+
+            foreach (Button btn in buttons)
+            {
+                buttons[0].gameObject.SetActive(false);
+            }
         }
         player.DesativaInput();
 

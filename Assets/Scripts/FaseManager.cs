@@ -1,15 +1,23 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
 public class FaseManager : MonoBehaviour
 {
-    public static FaseManager fm; // singleton
+    public TMP_Text mensagemFase;
 
-    public Transform[] spawnsFases;
-    public int faseAtual;
+    public static FaseManager fm; // singleton
+    [System.Serializable]
+    public class Fase
+    {
+        public Transform spawnEntradaEsquerda;
+        public Transform spawnEntradaDireita;
+    }
+
+    public Fase[] fases;
+
     private GameController gc;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
 
@@ -19,41 +27,59 @@ public class FaseManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject); // evita múltiplos FaseManager
+            Destroy(gameObject); // evita mÃºltiplos FaseManager
         }
         gc = GameController.gc;
     }
-    void Start()
-    {
-        faseAtual = PlayerPrefs.GetInt("FaseAtual", 0);
-    }
-    public void IrParaFase(int faseDestino, Transform player)
-    {
-        if (faseDestino < 0 || faseDestino >= spawnsFases.Length)
-        {
-            Debug.LogError("Fase destino inválida: " + faseDestino);
-            return;
-        }
 
-        if (spawnsFases[faseDestino] == null)
-        {
-            Debug.LogError("Spawn da fase " + faseDestino + " está vazio!");
+
+    public void IrParaFase(int faseDestino, Transform player, bool veioDaDireita)
+    {
+        GameController.gc.ultimaEntradaFoiDireita = veioDaDireita;
+        
+
+        if (faseDestino < 0 || faseDestino >= fases.Length)
             return;
-        }
-        faseAtual = faseDestino;
-        player.position = spawnsFases[faseDestino].position;
+
+        GameController.gc.faseAtual = faseDestino;
+
+        if (veioDaDireita)
+            player.position = fases[faseDestino].spawnEntradaDireita.position;
+        else
+            player.position = fases[faseDestino].spawnEntradaEsquerda.position;
+
+        GameController.gc.SalvarProgresso();
     }
 
-    // ? Próxima fase
+    public void MostrarMensagem(string msg)
+    {
+        StopAllCoroutines();
+        StartCoroutine(MostrarTemporario(msg));
+    }
+
+    IEnumerator MostrarTemporario(string msg)
+    {
+        mensagemFase.text = msg;
+        mensagemFase.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(2f);
+
+        mensagemFase.gameObject.SetActive(false);
+    }
+
+    // ? PrÃ³xima fase
     public void ProximaFase(Transform player)
     {
-        IrParaFase(faseAtual + 1, player);
+        int proxima = GameController.gc.faseAtual + 1;
+
+        IrParaFase(proxima, player, false);
     }
 
-    // ? Fase anterior
     public void FaseAnterior(Transform player)
     {
-        IrParaFase(faseAtual - 1, player);
+        int anterior = GameController.gc.faseAtual - 1;
+
+        IrParaFase(anterior, player, true);
     }
 
 }

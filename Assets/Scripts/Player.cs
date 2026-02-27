@@ -54,11 +54,25 @@ public class Player :MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         playerLife = GetComponent<PlayerHealth>();
 
+        CarregarPlayer();
+
         // pega a action pelo nome EXATO dela
         skillAction = playerInput.actions["CastSkill"];
 
         // começa desativada
-        skillAction.Disable();
+        
+
+        if (!temTrovao)
+        {
+            Debug.Log("Trovão nao adquirido");
+            skillAction.Disable();
+        } 
+        else
+        {
+            Debug.Log("Trovão já adquirido, habilitando skill");
+            skillAction.Enable();
+        }
+            
     }
     void Start()
     {
@@ -319,9 +333,12 @@ public class Player :MonoBehaviour
 
             if (tipo == ItemType.TrovaoSkill)
             {
+
                 // aqui você pode fazer algo específico do trovão se quiser
-                //temTrovao = true;
                 nearbyItem.ColetarTrovaoSkill(this);
+                //temTrovao = true;
+                Debug.Log("Tem trovão? " + temTrovao);
+                Debug.Log("Skill enabled? " + skillAction.enabled);
                 skillAction.Enable();
                 Debug.Log("Pegou skill do trovão");
             }

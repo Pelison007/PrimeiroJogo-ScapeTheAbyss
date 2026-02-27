@@ -6,6 +6,8 @@ public class Porta : MonoBehaviour
     [Header("Cooldown da Porta")]
     public float cooldownEntrada = 2f;
 
+    [Header("Spawn da Próxima Fase")]
+    public bool entraPelaDireita;
     public enum TipoPorta
     {
         FaseEspecifica,
@@ -55,38 +57,9 @@ public class Porta : MonoBehaviour
             col.enabled = false;
 
         SondNextLevel();
-        MostrarTexto();
+        //MostrarTexto();
 
         StartCoroutine(DelayTP(collision));
-    }
-
-    void MostrarTexto()
-    {
-        if (GameController.gc == null) return;
-
-        switch (tipoPorta)
-        {
-            case TipoPorta.UltimaFase:
-                StartCoroutine(MostrarTextoTemporario(GameController.gc.UltimaFaseText?.gameObject));
-                break;
-
-            case TipoPorta.ProximaFase:
-                StartCoroutine(MostrarTextoTemporario(GameController.gc.NextLevelText?.gameObject));
-                break;
-
-            case TipoPorta.VoltarFase:
-                StartCoroutine(MostrarTextoTemporario(GameController.gc.VoltarFaseText?.gameObject));
-                break;
-        }
-    }
-
-    IEnumerator MostrarTextoTemporario(GameObject texto, float tempo = 2.5f)
-    {
-        if (texto == null) yield break;
-
-        texto.SetActive(true);
-        yield return new WaitForSeconds(tempo);
-        texto.SetActive(false);
     }
 
     IEnumerator DelayTP(Collider2D collision)
@@ -97,11 +70,35 @@ public class Porta : MonoBehaviour
         if (player != null)
             player.DesativaInput();
 
-        yield return new WaitForSeconds(delayTP);
-
         if (FaseManager.fm != null)
         {
-            Debug.Log(FaseManager.fm);
+            string mensagem = "";
+
+            switch (tipoPorta)
+            {
+                case TipoPorta.ProximaFase:
+                    mensagem = "Indo para a próxima fase...";
+                    break;
+
+                case TipoPorta.VoltarFase:
+                    mensagem = "Voltando...";
+                    break;
+
+                case TipoPorta.FaseEspecifica:
+                    mensagem = "Entrando na fase " + faseDestino + "...";
+                    break;
+
+                case TipoPorta.UltimaFase:
+                    mensagem = "Boss FINAL!";
+                    break;
+            }
+
+            // 💬 MOSTRA IMEDIATAMENTE
+            FaseManager.fm.MostrarMensagem(mensagem);
+
+            // ⏳ AGORA espera antes de teleportar
+            yield return new WaitForSeconds(delayTP);
+
             switch (tipoPorta)
             {
                 case TipoPorta.ProximaFase:
@@ -113,19 +110,31 @@ public class Porta : MonoBehaviour
                     break;
 
                 case TipoPorta.FaseEspecifica:
-                    FaseManager.fm.IrParaFase(faseDestino, playerTransform);
+                    FaseManager.fm.IrParaFase(
+                        faseDestino,
+                        playerTransform,
+                        entraPelaDireita
+                    );
                     break;
 
                 case TipoPorta.UltimaFase:
-                    Debug.Log("Última fase!");
                     FaseManager.fm.ProximaFase(playerTransform);
                     break;
             }
 
             if (player != null && pontoRespawn != null)
                 player.AtualizaRespawn(pontoRespawn.position);
-                
         }
+
+        if (player != null)
+            player.AtivaInput();
+
+        yield return new WaitForSeconds(cooldownEntrada);
+
+        if (col != null)
+            col.enabled = true;
+
+        emTransicao = false;
 
         CameraFollow camFollow = Camera.main.GetComponent<CameraFollow>();
         if (camFollow != null)

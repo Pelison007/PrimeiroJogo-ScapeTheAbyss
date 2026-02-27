@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public bool ultimaEntradaFoiDireita;
     public int faseAtual;
     public static GameController gc;
     private HealthBar healthBarr;
@@ -64,6 +65,15 @@ public class GameController : MonoBehaviour
                 player.transform.position = player.ultimoRespawn; // aplica checkpoint
             }
 
+            if (FaseManager.fm != null && player != null)
+            {
+                FaseManager.fm.IrParaFase(
+                    faseAtual,
+                    player.transform,
+                    ultimaEntradaFoiDireita
+                );
+            }
+
             // Conta todos os objetos da cena (ativos)
             TotalSpirit = GameObject.FindGameObjectsWithTag("Spirit").Length;
             totalEsqueleto = GameObject.FindGameObjectsWithTag("Inimigo").Length;
@@ -72,6 +82,8 @@ public class GameController : MonoBehaviour
             Spirit = PlayerPrefs.GetInt("Spirit", Spirit);
             esqueleto = PlayerPrefs.GetInt("Esqueleto", esqueleto);
             lifes = PlayerPrefs.GetInt("Lifes", lifes);
+
+
 
             RefreshScreen();
             MostrarScreen();
@@ -135,9 +147,9 @@ public class GameController : MonoBehaviour
         PlayerPrefs.SetInt("Esqueleto", esqueleto);
         PlayerPrefs.SetInt("TotalEsqueleto", totalEsqueleto);
         PlayerPrefs.SetInt("Lifes", lifes);
-        PlayerPrefs.SetInt("FaseAtual", faseAtual);
+        PlayerPrefs.SetInt("UltimaEntrada", ultimaEntradaFoiDireita ? 1 : 0);
 
-        PlayerPrefs.SetInt("FaseAtual", SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.SetInt("FaseAtual", faseAtual);
 
         if (player != null)
             player.SalvarPlayer();
@@ -153,6 +165,7 @@ public class GameController : MonoBehaviour
         esqueleto = PlayerPrefs.GetInt("Esqueleto", esqueleto);
         totalEsqueleto = PlayerPrefs.GetInt("TotalEsqueleto", totalEsqueleto);
         lifes = PlayerPrefs.GetInt("Lifes", lifes);
+        ultimaEntradaFoiDireita = PlayerPrefs.GetInt("UltimaEntrada", 0) == 1;
 
         faseAtual = PlayerPrefs.GetInt("FaseAtual", 0);
     }
