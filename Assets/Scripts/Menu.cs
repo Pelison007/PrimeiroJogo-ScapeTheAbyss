@@ -40,4 +40,9 @@ public class Menu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void ReiniciartGame()
+    {
+        GameController.gc.RestartGame();
+    }
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public bool isRestarting = false;
+    public Transform spawnFase1; // arraste aqui o ponto de spawn da fase 1 no Inspector
     public bool ultimaEntradaFoiDireita;
     public int faseAtual;
     public static GameController gc;
@@ -40,6 +42,14 @@ public class GameController : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
 
+            // Se for a primeira vez que roda o jogo, seta spawn inicial
+            if (!PlayerPrefs.HasKey("UltimoRespawnX"))
+            {
+                PlayerPrefs.SetFloat("UltimoRespawnX", spawnFase1.position.x);
+                PlayerPrefs.SetFloat("UltimoRespawnY", spawnFase1.position.y);
+                PlayerPrefs.Save();
+            }
+
             // Carrega progresso geral
             CarregarProgresso();
         }
@@ -49,47 +59,45 @@ public class GameController : MonoBehaviour
             return;
         }
     }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (!scene.name.Contains("Menu"))
         {
-            // Pega o player da cena
+            // Pega o player
             if (player == null)
             {
                 GameObject p = GameObject.FindGameObjectWithTag("Player");
                 if (p != null) player = p.GetComponent<Player>();
             }
+
+            // Move o player para o √∫ltimo checkpoint
             if (player != null)
             {
-                player.CarregarPlayer(); // aplica vari·veis salvas
-                player.transform.position = player.ultimoRespawn; // aplica checkpoint
+                player.CarregarPlayer(); // carrega dados e ultimoRespawn
+                if (!player.ignorarUltimoRespawn)
+                {
+                    player.transform.position = player.ultimoRespawn;
+                    Debug.Log("Player movido para √∫ltimo checkpoint: " + player.ultimoRespawn);
+                }
             }
 
             if (FaseManager.fm != null && player != null)
             {
-                FaseManager.fm.IrParaFase(
-                    faseAtual,
-                    player.transform,
-                    ultimaEntradaFoiDireita
-                );
+                FaseManager.fm.IrParaFase(faseAtual, player.transform, ultimaEntradaFoiDireita);
             }
 
-            // Conta todos os objetos da cena (ativos)
+            // Atualiza contagem de objetos
             TotalSpirit = GameObject.FindGameObjectsWithTag("Spirit").Length;
             totalEsqueleto = GameObject.FindGameObjectsWithTag("Inimigo").Length;
 
-            // Carrega vari·veis que mudaram, mas n„o o total
+            // Carrega vari√°veis do progresso
             Spirit = PlayerPrefs.GetInt("Spirit", Spirit);
             esqueleto = PlayerPrefs.GetInt("Esqueleto", esqueleto);
             lifes = PlayerPrefs.GetInt("Lifes", lifes);
 
-
-
             RefreshScreen();
             MostrarScreen();
-            Debug.Log("Cena carregada: " + scene.name);
-            Debug.Log("Total Spirit na cena: " + TotalSpirit);
-            Debug.Log("Total Esqueleto na cena: " + totalEsqueleto);
         }
     }
 
@@ -123,7 +131,7 @@ public class GameController : MonoBehaviour
     }
     public void MostrarTextoFase(string mensagem)
     {
-        // Pode usar NextLevelText ou outro Text/TMP_Text especÌfico
+        // Pode usar NextLevelText ou outro Text/TMP_Text espec√≠fico
         NextLevelText.text = mensagem;
         NextLevelText.gameObject.SetActive(true); // garante que aparece
     }
@@ -172,9 +180,18 @@ public class GameController : MonoBehaviour
 
     public void RestartGame()
     {
-        PlayerPrefs.DeleteAll(); // apaga todo o progresso
-        SceneManager.LoadScene("GameOver"); // carrega primeira fase
-        Debug.Log("Jogo reiniciado!");
+        // Limpa todo progresso
+        PlayerPrefs.DeleteAll();
+
+        // Reseta fase atual
+        faseAtual = 0;
+
+        // Ignora checkpoint antigo
+        if (player != null)
+            player.ignorarUltimoRespawn = true;
+
+        // Carrega a fase
+        SceneManager.LoadScene("Fase 1");
     }
 
     // ------------------- Vidas -------------------
@@ -184,5 +201,6 @@ public class GameController : MonoBehaviour
         if (lifes < 0) lifes = 0;
         RefreshScreen();
     }
+
 
 }

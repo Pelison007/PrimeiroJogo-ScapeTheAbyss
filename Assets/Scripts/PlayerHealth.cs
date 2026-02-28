@@ -110,11 +110,12 @@ public class PlayerHealth: Health
             {
                 // Zerou → reset completo
                 PlayerPrefs.DeleteAll();
+                GameController.gc.isRestarting = true;
                 PlayerPrefs.Save();
                 GameController.gc.RetirarScreen();
-
                 // Vai direto para a cena GameOver
                 Invoke(nameof(LoadGameOver), 2f);
+
             }
         }
     }

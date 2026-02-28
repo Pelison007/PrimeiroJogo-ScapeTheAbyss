@@ -4,6 +4,7 @@ using TMPro;
 
 public class Player :MonoBehaviour
 {
+    public bool ignorarUltimoRespawn = false;
     private Vector2 direcao;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
@@ -58,8 +59,6 @@ public class Player :MonoBehaviour
 
         // pega a action pelo nome EXATO dela
         skillAction = playerInput.actions["CastSkill"];
-
-        // começa desativada
         
 
         if (!temTrovao)
@@ -76,7 +75,6 @@ public class Player :MonoBehaviour
     }
     void Start()
     {
-        ultimoRespawn = transform.position; // começa no ponto inicial da cena
         gcPlayer = GameController.gc;
         gcPlayer.Spirit = 0;
         gcPlayer.esqueleto = 0;
@@ -86,8 +84,9 @@ public class Player :MonoBehaviour
 
         GameController.gc.RefreshScreen();
 
-            if (ultimoRespawn == Vector2.zero)
-                ultimoRespawn = transform.position;
+        // ❗ Adicione estas duas linhas:
+        CarregarPlayer();                // pega ultimo checkpoint e itens
+        transform.position = ultimoRespawn; // move o player para o checkpoint
     }
     public void DesativaInput()
     {
@@ -279,7 +278,13 @@ public class Player :MonoBehaviour
     public void AtualizaRespawn(Vector2 pos)
     {
         ultimoRespawn = pos;
-        SalvarPlayer();
+        
+        // Salva no PlayerPrefs
+        PlayerPrefs.SetFloat("UltimoRespawnX", ultimoRespawn.x);
+        PlayerPrefs.SetFloat("UltimoRespawnY", ultimoRespawn.y);
+
+        SalvarPlayer(); // mantém os outros dados salvos
+        Debug.Log("Respawn atualizado para: " + ultimoRespawn);
         Debug.Log("Respawn atualizado para: " + ultimoRespawn);
     }
 
@@ -408,8 +413,9 @@ public class Player :MonoBehaviour
     {
         PlayerPrefs.SetInt("hasUmbrella", hasUmbrella ? 1 : 0);
         PlayerPrefs.SetInt("TemTrovao", temTrovao ? 1 : 0);
-        PlayerPrefs.SetFloat("RespawnX", ultimoRespawn.x);
-        PlayerPrefs.SetFloat("RespawnY", ultimoRespawn.y);
+        //PlayerPrefs.SetFloat("UltimoRespawnX", ultimoRespawn.x);
+        //PlayerPrefs.SetFloat("UltimoRespawnY", ultimoRespawn.y);
+
         PlayerPrefs.Save();
     }
 
@@ -418,9 +424,28 @@ public class Player :MonoBehaviour
         hasUmbrella = PlayerPrefs.GetInt("hasUmbrella", 0) == 1;
         temTrovao = PlayerPrefs.GetInt("TemTrovao", 0) == 1;
 
-        float x = PlayerPrefs.GetFloat("RespawnX", transform.position.x);
-        float y = PlayerPrefs.GetFloat("RespawnY", transform.position.y);
-        ultimoRespawn = new Vector2(x, y);
+        if (!ignorarUltimoRespawn)
+        {
+            // Só carrega último checkpoint se não estivermos reiniciando
+            float x = PlayerPrefs.GetFloat("UltimoRespawnX", transform.position.x);
+            float y = PlayerPrefs.GetFloat("UltimoRespawnY", transform.position.y);
+            ultimoRespawn = new Vector3(x, y, 0);
+
+            // Move player para o checkpoint
+            transform.position = ultimoRespawn;
+            Debug.Log("Checkpoint carregado: " + ultimoRespawn);
+        }
     }
+
+    private void OnApplicationQuit()
+    {
+        SalvarPlayer(); // salva ao fechar o jogo
+    }
+
+    private void OnApplicationPause(bool pauseStatus)
+    {
+        if (pauseStatus) SalvarPlayer(); // salva ao minimizar ou pausar
+    }
+
 }
 

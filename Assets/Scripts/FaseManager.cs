@@ -33,20 +33,23 @@ public class FaseManager : MonoBehaviour
     }
 
 
-    public void IrParaFase(int faseDestino, Transform player, bool veioDaDireita)
+    public void IrParaFase(int faseDestino, Transform player, bool veioDaDireita, bool restart = false)
     {
         GameController.gc.ultimaEntradaFoiDireita = veioDaDireita;
-        
 
         if (faseDestino < 0 || faseDestino >= fases.Length)
             return;
 
         GameController.gc.faseAtual = faseDestino;
 
-        if (veioDaDireita)
-            player.position = fases[faseDestino].spawnEntradaDireita.position;
-        else
-            player.position = fases[faseDestino].spawnEntradaEsquerda.position;
+        // Só move o player se não for restart
+        if (!restart)
+        {
+            if (veioDaDireita)
+                player.position = fases[faseDestino].spawnEntradaDireita.position;
+            else
+                player.position = fases[faseDestino].spawnEntradaEsquerda.position;
+        }
 
         GameController.gc.SalvarProgresso();
     }

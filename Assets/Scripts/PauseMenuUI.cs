@@ -85,6 +85,11 @@ public class PauseMenuUI : MonoBehaviour
         if (AudioManager.instance != null)
             AudioManager.instance.Stop("Principal");
 
+        // Quando o player vai ao menu:
+        GameController.gc.SalvarProgresso();
+        if (player != null)
+            player.SalvarPlayer();
+
         SceneManager.LoadScene("Menu");
     }
 }
